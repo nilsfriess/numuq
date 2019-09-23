@@ -1,0 +1,16 @@
+{{- define "main" -}}
+<div class="header text-3xl mb-4">{{ .Title }}</div>
+
+<div class="events">
+  <ul class="list-disc list-outside">
+    {{ range .Params.event }}
+    <li class="event">
+      <a href="{{ .url }}" class="font-semibold hover:text-red-700"
+        >{{ .name }}</a
+      >
+      <p class="font-thin text-sm">{{ .location }}, {{ .date }}</p>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

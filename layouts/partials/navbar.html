@@ -1,0 +1,40 @@
+<nav id="nav" class="flex items-center justify-between flex-wrap p-6">
+  <div class="nav-title flex items-center mr-6">
+    <a href="/" class="font-semibold text-xl tracking-tight"
+      >{{ .Param "pageTitle" }}</a
+    >
+  </div>
+  <div class="block lg:hidden">
+    <button
+      id="menu-button"
+      class="flex items-center px-3 py-2 border rounded text-red-700 border-red-700 hover:text-black hover:border-black"
+    >
+      <svg
+        class="fill-current h-3 w-3"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      </svg>
+    </button>
+  </div> 
+  {{ $currentPage := .Page }} {{ $currentSite := .Site }}
+  <div id="nav-items" class="w-full block flex-grow lg:flex lg:w-auto hidden">
+    <div class="text-sm lg:flex-grow">
+      {{ range $currentSite.Menus.main }}
+      <span></span>
+      {{ $active := $currentPage.HasMenuCurrent "main" . }}
+      {{ $active := or $active ($currentPage.IsMenuCurrent "main" .)}}
+      <a 
+        href="{{ .URL }}"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	      {{ if $active }} active {{ end }}
+"
+      >
+        {{.Name}}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</nav>

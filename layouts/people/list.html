@@ -1,0 +1,77 @@
+{{- define "main" -}}
+
+<div class="members">
+  <div class="header text-3xl">{{ .Title }}</div>
+
+  {{ if isset .Params "prof" }}
+  <div class="text-xl">Head of Group</div>
+  <hr />
+  <ul class="list-disc list-outside">
+    <li class="student">
+      <a href="/" class="font-semibold hover:text-red-700"
+        >{{ .Params.prof | markdownify }}</a
+      ><br />
+      <p class="font-thin">{{ .Params.description | markdownify }}</p>
+    </li>
+  </ul>
+  {{ end }} {{ if isset .Params "postdoc" }}
+  <div class="text-xl">Postdocs</div>
+  <hr />
+  <ul class="list-disc list-outside">
+    {{ range .Params.postdoc }}
+    <li class="student">
+      <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
+      <p class="font-thin">{{ .topic | markdownify }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }} {{ if isset .Params "phd" }}
+  <div class="text-xl">PhD Students</div>
+  <hr />
+  <ul class="list-disc list-outside">
+    {{ range .Params.phd }}
+    <li class="student">
+      <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
+      <p class="font-thin">{{ .topic | markdownify }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+<div class="members">
+  {{ if isset .Params "member" }}
+  <div class="header text-3xl">{{ .Params.affiliated_title }}</div>
+  <ul class="list-disc list-outside">
+    {{ range .Params.member }}
+    <li class="student">
+      <emph class="font-semibold">{{ .name | markdownify }}</emph>
+      <span>({{ .role }})</span>
+      <br />
+      <p class="font-thin">{{ .topic | markdownify }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+<div class="pastmembers">
+  {{ if isset .Params "pastmember" }}
+  <ul class="list-disc list-outside">
+    {{ range .Params.pastmember }}
+    <li class="student">
+      <emph class="font-semibold">{{ .name | markdownify }}:</emph>
+      {{ .thesis | markdownify }}
+      <br />
+      <p class="font-thin text-sm">{{ .description | markdownify }}</p>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+{{ if not (isset .Params "identifier") }}
+<a href="past" class="header underline text-xl hover:text-red-700">
+  List of Past Group Members
+</a>
+{{ end }} {{ end }}

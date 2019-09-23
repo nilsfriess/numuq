@@ -1,0 +1,39 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-us"
+title = "Home"
+
+[menu]
+# lower weight will come first
+  [[menu.main]]
+    identifier = "people"
+    name = "People"
+    url = "/people/"
+    weight = -300
+
+  [[menu.main]]
+    identifier = "news"
+    name = "News & Events" 
+    url = "/news/"
+    weight = -250 
+
+  [[menu.main]]
+    identifier = "visitors"
+    name = "Visitors"
+    url = "/visitors/"
+    weight = -200
+
+  [[menu.main]]
+    identifier = "research"
+    name = "Research"
+    url = "/research/"
+    weight = -100
+
+  [[menu.main]]
+    identifier = "teaching"
+    name = "Teaching"
+    url = "/teaching/"
+    weight = -90 
+ 
+[params]
+  pageTitle = "Numerical Analysis and UQ"  
+

@@ -1,0 +1,14 @@
+{{- define "main" -}}
+<div class="visitors">
+  <div class="header text-3xl">{{ .Title }}</div>
+
+  <ul class="list-disc list-outside">
+    {{ range .Params.visitor }}
+    <li class="student">
+      <emph class="font-semibold">{{ .name }} </emph>({{ .affiliation }})<br />
+      <p class="font-thin">{{ .timespan }}</p>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
