@@ -62,23 +62,56 @@ hr {
     margin-bottom: 12px;
 }
 
-.members ul, .pastmembers ul, .events ul, .visitors ul {
+.members ul, .pastmembers ul, .events ul, .visitors ul, .teaching ul, .lecture ul {
     margin-left: 18px; 
     margin-bottom: 36px;
 }
 
-.members li, .pastmembers li, .events li, .visitors li {
-    margin-bottom: 12px; 
+.members li, .pastmembers li, .events li, .visitors li, .teaching li, .lecture li {
+    margin-bottom: 12px;  
 }
 
-.members .header, .visitors .header {
+.members .header, .visitors .header, .teaching .header {
     margin-bottom: 16px;
 }
 
-.student a:hover {
+.lecture .header {
+    margin-bottom: 8px;
+}
+
+.student a {
     color: #c53030;
+}
+
+.student a:hover {
+    color: black;
 }
 
 a.active {
     font-weight: 700;
+}
+
+.teaching div.term {
+    padding-left: 12px;
+    border-left: 1px solid #c53030;
+}
+
+.lecture-item a {
+    color: #c53030;
+}
+
+.lecture-item a:hover {
+    color: black;
+}
+
+.lecture ul {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+}
+
+.lecture li a {
+    color: #c53030;
+}
+.lecture li a:hover {
+    color: black;
 }

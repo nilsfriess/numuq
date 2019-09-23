@@ -1,7 +1,42 @@
 {{- define "main" -}}
 <div class="teaching">
   <div class="header text-3xl">{{ .Title }}</div>
+  {{ range first 1 .Params.term }}
+  <div class="text-xl">Current Term ({{ .title }})</div>
   <hr />
-  <div class="text-xl">Current Term</div>
+  <ul class="list-disc list-outside">
+    {{ range .lecture }} {{ if isset . "page" }}
+    <li class="lecture-item">
+      <a href="{{ .page | lower }}">
+        {{ .title | markdownify }}
+      </a>
+    </li>
+    {{ else }}
+    <li class="lecture-item">
+      {{ .title | markdownify }}
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+  {{ end }}
+  <div class="text-xl">Past Terms</div>
+  <hr />
+  {{ range after 1 .Params.term }}
+  <div class="term">
+    <div class="text-l font-semibold">{{ .title }}</div>
+    <ul class="list-disc list-outside">
+      {{ range .lecture }} {{ if isset . "page" }}
+      <li class="lecture-item">
+        <a href="{{ .page | lower }}">
+          {{ .title | markdownify }}
+        </a>
+      </li>
+      {{ else }}
+      <li class="lecture-item">
+        {{ .title | markdownify }}
+      </li>
+      {{ end }} {{ end }}
+    </ul>
+  </div>
+  {{ end }}
 </div>
 {{ end }}

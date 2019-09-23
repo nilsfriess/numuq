@@ -1,1 +1,7 @@
-{{ define "main" }} Teaching single {{ .Content }} {{ end }}
+{{ define "main" }}
+<div class="lecture">
+  <div class="header text-xl">{{ .Params.title }}</div>
+  <hr />
+  {{ .Content }}
+</div>
+{{ end }}
