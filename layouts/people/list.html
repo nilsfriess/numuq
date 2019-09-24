@@ -5,8 +5,7 @@
 
   {{ if isset .Params "prof" }}
   <div class="text-xl">Head of Group</div>
-  <hr />
-  <ul class="list-disc list-outside">
+  <ul class="red-border">
     <li class="student">
       <a href="/" class="font-semibold hover:text-red-700"
         >{{ .Params.prof | markdownify }}</a
@@ -16,8 +15,7 @@
   </ul>
   {{ end }} {{ if isset .Params "postdoc" }}
   <div class="text-xl">Postdocs</div>
-  <hr />
-  <ul class="list-disc list-outside">
+  <ul class="red-border">
     {{ range .Params.postdoc }}
     <li class="student">
       <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
@@ -27,8 +25,7 @@
   </ul>
   {{ end }} {{ if isset .Params "phd" }}
   <div class="text-xl">PhD Students</div>
-  <hr />
-  <ul class="list-disc list-outside">
+  <ul class="red-border">
     {{ range .Params.phd }}
     <li class="student">
       <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
@@ -42,7 +39,7 @@
 <div class="members">
   {{ if isset .Params "member" }}
   <div class="header text-3xl">{{ .Params.affiliated_title }}</div>
-  <ul class="list-disc list-outside">
+  <ul class="list-outside red-border">
     {{ range .Params.member }}
     <li class="student">
       <emph class="font-semibold">{{ .name | markdownify }}</emph>
@@ -57,7 +54,7 @@
 
 <div class="pastmembers">
   {{ if isset .Params "pastmember" }}
-  <ul class="list-disc list-outside">
+  <ul class="red-border">
     {{ range .Params.pastmember }}
     <li class="student">
       <emph class="font-semibold">{{ .name | markdownify }}:</emph>

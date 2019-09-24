@@ -23,7 +23,7 @@
   {{ range after 1 .Params.term }}
   <div class="term">
     <div class="text-l font-semibold">{{ .title }}</div>
-    <ul class="list-disc list-outside">
+    <ul class="">
       {{ range .lecture }} {{ if isset . "page" }}
       <li class="lecture-item">
         <a href="{{ .page | lower }}">

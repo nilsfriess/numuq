@@ -71,6 +71,10 @@ hr {
     margin-bottom: 12px;  
 }
 
+li.event, .pastmembers li.student {
+    margin-bottom: 24px;
+}
+
 .members .header, .visitors .header, .teaching .header {
     margin-bottom: 16px;
 }
@@ -91,7 +95,7 @@ a.active {
     font-weight: 700;
 }
 
-.teaching div.term {
+.teaching div.term, ul.red-border {
     padding-left: 12px;
     border-left: 1px solid #c53030;
 }
