@@ -84,11 +84,11 @@ li.event, .pastmembers li.student {
     margin-bottom: 8px;
 }
 
-.student a {
+.student a, .person a {
     color: #c53030;
 }
 
-.student a:hover {
+.student a:hover, .person a:hover {
     color: black;
 }
 

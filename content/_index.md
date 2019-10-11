@@ -11,8 +11,10 @@ Im Neuenheimer Feld 205<br>
 """
 
 secretary = """
-Herta Fitzer<br>
-Room: 1 / 318
+HERTA **FITZER**<br>
+Herta.Fitzer [at] iwr.uni-heidelberg.de<br>
++49 6221 5414111<br>
+Room: 1 / 318 
 """
 
 [[research_area]]

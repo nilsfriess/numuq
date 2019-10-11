@@ -10,7 +10,7 @@ type = "news"
   date = "SS 2019"
 
 [[event]]
-  name = "International Workshop on \"Uncertainty Quantification, Machine Learning and Bayesian Statistics in Scientific Computing\" "
+  name = "International Workshop on \"Uncertainty Quantification, Machine Learning and Bayesian Statistics in Scientific Computing\""
   url = "https://sites.google.com/view/match2019/overview"
   location = "Heidelberg University"
   date = "July 1-5, 2019"
@@ -20,10 +20,4 @@ type = "news"
   url = "https://www.esi.ac.at/activities/events/2020/computational-uncertainty-quantification-mathematical-foundations-methodology-data"
   location = "ESI, Austrian Academy of Sciences, Vienna"
   date = "May 4 - June 26, 2020"
-
-[[event]]
-  name = "Test event"
-  url = "https://google.com"
-  location = "Mathematikon"
-  date = "October 15 2020"
 +++

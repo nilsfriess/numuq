@@ -11,18 +11,22 @@ name = "rob"
 [[phd]]
   name = "Gianluca Detommaso"
   topic = "Accelerating Bayesian Sampling in Uncertainty Quantification"
+  page = "gianluca"
   
 [[phd]]
   name = "Arne Strehlow"
   topic = "High-level Geometric Priors in Bayesian Inference for PDE Problems"
+  page = "arne"
   
 [[postdoc]]
   name = "Alec Gilbert"
   topic = "Quasi-Monte Carlo and Uncertainty Quantification for Eigenproblems"
+  page = "alec"
  
 [[postdoc]]
   name = "Chupeng Ma"
   topic = "Multiscale Numerical Methods and Analysis"
+  page = "chupeng"
 
 # Affiliated members
 

@@ -18,7 +18,13 @@
   <ul class="red-border">
     {{ range .Params.postdoc }}
     <li class="student">
+      {{ if .page }}
+      <a href="{{ .page }}" class="font-semibold hover:text-red-700"
+        >{{ .name | markdownify }}</a
+      ><br />
+      {{ else }}
       <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
+      {{ end }}
       <p class="font-thin">{{ .topic | markdownify }}</p>
     </li>
     {{ end }}
@@ -28,7 +34,13 @@
   <ul class="red-border">
     {{ range .Params.phd }}
     <li class="student">
+      {{ if .page }}
+      <a href="{{ .page }}" class="font-semibold hover:text-red-700"
+        >{{ .name | markdownify }}</a
+      ><br />
+      {{ else }}
       <emph class="font-semibold">{{ .name | markdownify }}</emph><br />
+      {{ end }}
       <p class="font-thin">{{ .topic | markdownify }}</p>
     </li>
     {{ end }}

@@ -25,3 +25,378 @@ date     = "2019"
 title    = "A Hybrid Alternating Least Squares - TT Cross Algorithm for Parametric PDEs"
 journal  = "SIAM/ASA Journal on Uncertainty Quantification **7**(1):260-291"
 link_url = "https://arxiv.org/abs/1707.04562"
+
+[[journal]]
+authors  = "G. Detommaso, T. Dodwell and R. Scheichl"
+date     = "2019"
+title    = "Continuous Level Monte Carlo and Sample-Adaptive Model Hierarchies"
+journal  = "SIAM/ASA Journal on Uncertainty Quantification **7**(1):93-116"
+link_url = "http://arxiv.org/abs/1802.07539"
+
+[[journal]]
+authors  = "G. Detommaso, T. Cui, A. Spantini, Y. Marzouk and R. Scheichl"
+date     = "2018"
+title    = "A Stein Variational Newton Method"
+journal  = "Advances in Neural Information Processing Systems (NIPS 2018) **31**:9187-9197"
+link_url = "http://arxiv.org/abs/1806.03085"
+
+[[journal]]
+authors  = "I.G. Graham, F.Y. Kuo, D. Nuyens, R. Scheichl and I.H. Sloan"
+date     = "2018"
+title    = "Circulant Embedding with QMC - Analysis for Elliptic PDE with Lognormal Coefficients"
+journal  = "Numerische Mathematik **140**(2):479-511"
+link_url = "http://arxiv.org/abs/1710.09254"
+
+[[journal]]
+authors  = "I.G. Graham, F.Y. Kuo, D. Nuyens, R. Scheichl and I.H. Sloan"
+date     = "2018"
+title    = "Analysis of Circulant Embedding Methods for Sampling Stationary Random Fields"
+journal  = "SIAM Journal on Numerical Analysis **56**(3):1871-1895"
+link_url = "http://arxiv.org/abs/1710.00751"
+
+[[journal]]
+authors  = "G. Katsiolides, E.H. Müller, R. Scheichl, T. Shardlow, M.B. Giles and D.J. Thomson"
+date     = "2018"
+title    = "Multilevel Monte Carlo and Improved Timestepping Methods in Atmospheric Dispersion Modelling"
+journal  = "Journal of Computational Physics **354**:320-343"
+link_url = "http://arxiv.org/abs/1612.07717"
+
+[[journal]]
+authors  = "A. Reinarz, T. Dodwell, T. Fletcher, L. Seelinger, R. Butler and R. Scheichl"
+date     = "2018"
+title    = "_dune-composites_ - A New Framework for High-Performance Finite Element Modelling of Laminates"
+journal  = "Composite Structures **184**:269-278"
+link_url = "https://arxiv.org/abs/1707.04228"
+
+[[journal]]
+authors  = "D Drzisga, B. Gmeiner, U. Rüde, R. Scheichl and B. Wohlmuth"
+date     = "2017"
+title    = "Scheduling Massively Parallel Multigrid for Multilevel Monte Carlo Methods"
+journal  = "SIAM Journal on Scientific Computing **39**(5):S873-S897"
+link_url = "http://arxiv.org/abs/1607.03252"
+
+[[journal]]
+authors  = "F.Y. Kuo, R. Scheichl, Ch. Schwab, I.H. Sloan and E. Ullmann"
+date     = "2017"
+title    = "Multilevel Quasi-Monte Carlo Methods for Lognormal Diffusion Problems"
+journal  = "Mathematics of Computation **86**:2827-2860"
+link_url = "http://arxiv.org/abs/1507.01090"
+
+[[journal]]
+authors  = "R. Scheichl, A. Stuart and A.L. Teckentrup"
+date     = "2017"
+title    = "Quasi-Monte Carlo and Multilevel Monte Carlo Methods for Computing Posterior Expectations in Elliptic Inverse Problems"
+journal  = "SIAM/ASA Journal on Uncertainty Quantification **5**(1):493-518"
+link_url = "http://arxiv.org/abs/1602.04704"
+
+[[journal]]
+authors  = "D. Peterseim and R. Scheichl"
+date     = "2016"
+title    = "Robust Numerical Upscaling of Elliptic Multiscale Problems at High Contrast"
+journal  = "Computational Methods in Applied Mathematics **16**(4):579-603"
+link_url = "http://arxiv.org/abs/1601.06549"
+
+[[journal]]
+authors  = "T.A. Fletcher, T. Kim, T.J. Dodwell, R. Butler, R. Scheichl and R. Newley"
+date     = "2016"
+title    = "Resin Treatment of Free Edges to Aid Certification of Through Thickness Laminate Strength"
+journal  = "Composite Structures **146**:26-33"
+
+[[journal]]
+authors   = "A. Ferreiro-Castilla, A.E. Kyprianou and R. Scheichl"
+date      = "2016"
+title     = "An Euler-Poisson Scheme for Levy driven SDEs"
+journal   = "Journal of Applied Probability **53**(1):262-278"
+link_name = "Preprint (Sept 2013)"
+link_url  = "http://arxiv.org/abs/1309.1839"
+
+[[journal]]
+authors  = "A. Dedner, E.H. Mueller and R. Scheichl"
+date     = "2016"
+title    = "Efficient Multigrid Preconditioners for Atmospheric Flow Simulations at High Aspect Ratio"
+journal  = "International Journal for Numerical Methods in Fluids **80**(1):76-102"
+link_url = "http://arxiv.org/abs/1408.2981"
+
+[[journal]]
+authors   = "I.G. Graham, R. Scheichl and E. Ullmann"
+date      = "2015"
+title     = "Mixed Finite Element Analysis of Lognormal Diffusion and Multilevel Monte Carlo Methods"
+journal   = "Stochastics and Partial Differential Equations: Analysis and Computations **4**(1):41-75"
+link_name = "Preprint (Dec 2013)"
+link_url  = "http://arxiv.org/abs/1312.6047"
+
+[[journal]]
+authors  = "S. Loisel, H. Nguyen and R. Scheichl"
+date     = "2015"
+title    = "Optimized Schwarz and 2-Lagrange Multiplier Methods for Multiscale PDEs"
+journal  = "SIAM Journal of Scientific Computing **37**(6):A2896-A2923"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/spectralosm.pdf"
+
+[[journal]]
+authors  = "E.H. Mueller, R. Scheichl and E. Vainikko"
+date     = "2015"
+title    = "Petascale Solvers for Anisotropic PDEs in atmospheric modelling on GPU Clusters"
+journal  = "Parallel Computing **50**:53-69"
+link_url = "http://arxiv.org/abs/1402.3545"
+
+[[journal]]
+authors   = "T.J. Dodwell, C. Ketelsen, R. Scheichl and A.L. Teckentrup"
+date      = "2015"
+title     = "A Hierarchical Multilevel Markov Chain Monte Carlo Algorithm with Applications to Uncertainty Quantification in Subsurface Flow"
+journal   = "SIAM/ASA Journal on Uncertainty Quantification **3**(1):1075-1108"
+link_name = "Preprint (v1: Mar 2013)"
+link_url  = "http://arxiv.org/abs/1303.7343"
+
+[[journal]]
+authors  = "E.H. Mueller, R. Scheichl and T. Shardlow"
+date     = "2015"
+title    = "Improving MLMC for SDEs with Application to the Langevin Equation"
+journal  = "Proceedings of the Royal Society A **471**:20140679"
+link_url = "http://arxiv.org/abs/1409.2342"
+
+[[journal]]
+authors   = "I.G. Graham, F.Y. Kuo, J.A. Nicholls, R. Scheichl, Ch. Schwab and I.H. Sloan"
+date      = "2015"
+title     = "Quasi-Monte Carlo Finite Element Methods for Elliptic PDEs with Log-normal Random Coefficients"
+journal   = "Numerische Mathematik **131**(2):329-368"
+link_name = "Preprint (May 2013)"
+link_url  = "http://www.sam.math.ethz.ch/sam_reports/index.php?id=2013-14"
+
+[[journal]]
+authors  = "M. Dauge, R.A. Norton and R. Scheichl"
+date     = "2014"
+title    = "Regularity of Maxwell Eigenproblems in Photonic Crystal Fibre Modelling"
+journal  = "BIT Numerical Mathematics **55**(1):59-80"
+link_url = "http://arxiv.org/abs/1310.7000"
+
+[[journal]]
+authors  = "E.H. Mueller and R. Scheichl"
+date     = "2014"
+title    = "Massively Parallel Solvers for Elliptic PDEs in Numerical Weather- and Climate Prediction"
+journal  = "Quarterly J Royal Meteorological Society **140**(685):2608-2624"
+link_url = "http://arxiv.org/abs/1307.2036"
+
+[[journal]]
+authors   = "A. Ferreiro-Castilla, A.E. Kyprianou, R. Scheichl and G. Suryanarayana"
+date      = "2014"
+title     = "Multilevel Monte Carlo Simulation for Levy Processes Based on the Wiener-Hopf Factorisation"
+journal   = "Stochastic Processes and their Applications **124**(2):985-1010"
+link_name = "Preprint (Oct 2012)"
+link_url  = "http://arxiv.org/abs/1210.5868"
+
+[[journal]]
+authors   = "N. Spillane, V. Dolean, P. Hauret, F. Nataf, C. Pechstein and R. Scheichl"
+date      = "2014"
+title     = "Abstract Robust Coarse Spaces for Systems of PDEs via Generalized Eigenproblems in the Overlaps"
+journal   = "Numerische Mathematik **126**(4):741-770"
+link_name = "Preprint (Nov 2011)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/2011-07.pdf"
+
+[[journal]]
+authors  = "E. Mueller, X. Guo, R. Scheichl and S. Shi"
+date     = "2013"
+title    = "Matrix-free GPU implementation of a preconditioned conjugate gradient solver for anisotropic elliptic PDEs"
+journal  = "Computing and Visualization in Science **16**(2):41-58"
+link_url = "http://arxiv.org/abs/1302.7193"
+
+[[journal]]
+authors  = "A.L. Teckentrup, R. Scheichl, M.B. Giles and E. Ullmann"
+date     = "2013"
+title    = "Further Analysis of Multilevel Monte Carlo Methods for Elliptic PDEs with Random Coefficients"
+journal  = "Numerische Mathematik **125**(3):569-600"
+link_url = "http://arxiv.org/abs/1204.3476"
+
+[[journal]]
+authors   = "J. Charrier, R. Scheichl and A.L. Teckentrup"
+date      = "2013"
+title     = "Finite Element Error Analysis of Elliptic PDEs with Random Coefficients and its Application to Multilevel Monte Carlo Methods"
+journal   = "SIAM Journal on Numerical Analysis **51**(1):322-352"
+link_name = "Preprint (April 2011)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/CharScheTeck2011_preprint.pdf"
+
+[[journal]]
+authors  = "R. Norton and R. Scheichl"
+date     = "2012"
+title    = "Planewave Expansion Methods for Photonic Crystal Fibres"
+journal  = "Applied Numerical Mathematics **63**:88-104"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/paper3final.pdf"
+
+[[journal]]
+authors   = "C. Pechstein and R. Scheichl"
+date      = "2012"
+title     = "Weighted Poincare Inequalities"
+journal   = "IMA Journal on Numerical Analysis **33**(2):652-686"
+link_name = "Preprint (Dec 2010)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/2010-10.pdf"
+
+[[journal]]
+authors  = "V. Dolean, F. Nataf, R. Scheichl and N. Spillane"
+date     = "2012"
+title    = "Analysis of a Two-level Schwarz Method with Coarse Spaces Based on Local Dirichlet-to-Neumann Maps"
+journal  = "Computational Methods in Applied Mathematics **12**(4):391-414"
+link_url = "https://hal.archives-ouvertes.fr/hal-00586246"
+
+[[journal]]
+authors   = "R. Scheichl, P.S. Vassilevski and L.T. Zikatanov"
+date      = "2012"
+title     = "Mutilevel Methods for Elliptic Problems with Highly Varying Coefficients on Non-Aligned Coarse Grids"
+journal   = "SIAM Journal on Numerical Analysis **50**(3):1675-1694"
+link_name = "Preprint (Aug 2010)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/SVZ_paper_I.pdf"
+
+[[journal]]
+authors   = "M. Marletta and R. Scheichl"
+date      = "2012"
+title     = "Eigenvalues in Spectral Gaps of Differential Operators"
+journal   = "Journal of Spectral Theory **2**(3):293-320"
+link_name = "Preprint (Sept 2010)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/kmspreprint.pdf"
+
+[[journal]]
+authors  = "P. Bastian, M. Blatt and R. Scheichl"
+date     = "2012"
+title    = "Algebraic Multigrid for Discontinuous Galerkin Discretizations"
+journal  = "Numerical Linear Algebra with Applications **19**(2):367-388"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/amg4dg.pdf"
+
+[[journal]]
+authors  = "N. Spillane, V. Dolean, P. Hauret, F. Nataf, C. Pechstein and R. Scheichl"
+date     = "2011"
+title    = "A Robust Two Level Domain Decomposition Preconditioner for Systems of PDEs"
+journal  = "Comptes Rendus Mathematique **349**(23-24):1255-1259"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/CRAS_SDHNPS_2011.pdf"
+
+[[journal]]
+authors  = "R. Scheichl, P.S. Vassilevski and L.T. Zikatanov"
+date     = "2011"
+title    = "Weak Approximation Properties of Elliptic Projections with Functional Constraints"
+journal  = "Multiscale Modeling and Simulation and Analysis **9**(4):1677-1699"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/IM-462079-7.pdf"
+
+[[journal]]
+authors  = "K.A. Cliffe, M.B. Giles, R. Scheichl and A.L. Teckentrup"
+date     = "2011"
+title    = "Multilevel Monte Carlo Methods and Applications to Elliptic PDEs with Random Coefficients"
+journal  = "Computing and Visualization in Science **14**(1):3-15"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/cgst.pdf"
+
+[[journal]]
+authors = "S.D. Buckeridge, M.J.P. Cullen, R. Scheichl and M. Wlasak"
+date    = "2011"
+title   = "A Robust Numerical Method for the Potential Vorticity Based Control Variable Transform in Variational Data Assimilation"
+journal = "Quarterly J Royal Meteorological Soc **137**(657):1083-1094"
+
+[[journal]]
+authors   = "C. Pechstein and R. Scheichl"
+date      = "2011"
+title     = "Analysis of FETI Methods for Multiscale PDEs - Part II: Interface Variation"
+journal   = "Numerische Mathematik **118**(3):485-529"
+link_name = "Preprint (July 2009)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/fetiMS2_PREPRINT.pdf"
+
+[[journal]]
+authors  = "I. G. Graham, F. Y. Kuo, D. Nuyens, R. Scheichl, and I. H. Sloan"
+date     = "2011"
+title    = "Quasi-Monte Carlo Methods for for Elliptic PDEs with Random Coefficients and Applications"
+journal  = "Journal of Computational Physics **230**(10):3668-3694"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/BICS10_4.pdf"
+
+[[journal]]
+authors  = "S.D. Buckeridge and R. Scheichl"
+date     = "2010"
+title    = "Parallel Geometric Multigrid for Global Weather Prediction"
+journal  = "Numerical Linear Algebra with Applications **17**:325-342"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/buckeridge_scheichl_numg_preprint.pdf"
+
+[[journal]]
+authors  = "R. Norton and R. Scheichl"
+date     = "2010"
+title    = "Convergence Analysis of Planewave Expansion Methods for Schroedinger Operators with Discontinuous Periodic Potentials"
+journal  = "SIAM Journal for Numerical Analysis **47**(6):4356-4380"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/NortonScheichlPreprint1.pdf"
+
+[[journal]]
+authors  = "C. Pechstein and R. Scheichl"
+date     = "2009"
+title    = "Scaling Up through Domain Decomposition"
+journal  = "Applicable Analysis **88**(10):1589-1608"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/ApplAnal_PechSchei_Revised_PP.pdf"
+
+[[journal]]
+authors  = "J. Van lent, R. Scheichl and I.G. Graham"
+date     = "2009"
+title    = "Energy Minimizing Coarse Spaces for Two-level Schwarz Methods for Multiscale PDEs"
+journal  = "Numerical Linear Algebra with Applications **16**(10):775-799"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/vsg_preprint1208.pdf"
+
+[[journal]]
+authors  = "C. Pechstein and R. Scheichl"
+date     = "2008"
+title    = "Analysis of FETI Methods for Multiscale PDEs"
+journal  = "Numerische Mathematik **111**(2):293-333"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/pech_schei_rep08-20.pdf"
+
+[[journal]]
+authors  = "B. Aksoylu, I.G. Graham, H. Klie and R. Scheichl"
+date     = "2008"
+title    = "Towards a Rigorously Justified Algebraic Preconditioner for High-Contrast Diffusion Problems"
+journal  = "Computing and Visualization in Science **11**, pp. 319-331"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/agks_preprint_08.pdf"
+
+[[journal]]
+authors  = "R. Scheichl and E. Vainikko"
+date     = "2007"
+title    = "Additive Schwarz with Aggregation-Based Coarsening for Elliptic Problems with Highly Variable Coefficients"
+journal  = "Computing **80**(4):319-343"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/sch_vai_preprint_9_06.pdf"
+
+[[journal]]
+authors  = "I.G. Graham, P. Lechner and R. Scheichl"
+date     = "2007"
+title    = "Domain Decomposition for Multiscale PDEs"
+journal  = "Numerische Mathematik **106**:589-626"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/gra_lec_sch_preprint_1106.pdf"
+
+[[journal]]
+authors  = "I.G. Graham and R. Scheichl"
+date     = "2007"
+title    = "Robust Domain Decomposition Algorithms for Multiscale PDEs"
+journal  = "Numerical Methods for Partial Differential Equations **23**(4):859-878"
+link_url = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/gra_sch_preprint_1406.pdf"
+
+[[journal]]
+authors   = "R. Scheichl, M.-H. Klopffer, Z. Benjelloun-Dabaghi, B. Flaconneche"
+date      = "2005"
+title     = "Permeation of Gases in Polymers: Parameter Identification and Nonlinear Regression Analysis"
+journal   = "Journal of Membrane Science **254**, pp. 275-293"
+link_name = "PostScript file"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/preprints/permgas.ps.gz"
+
+[[journal]]
+authors  = "R. Scheichl, R. Masson, J. Wendebourg"
+date     = "2003"
+title    = "Decoupling and Block Preconditioning for Sedimentary Basin Simulations"
+journal  = "Computational Geosciences **7**(4), pp. 295-318"
+link_url = "http://www.maths.bath.ac.uk/preprints/maths0205.ps.gz"
+
+[[journal]]
+authors  = "R. Scheichl"
+date     = "2002"
+title    = "Decoupling Three-dimensional Mixed Problems Using Divergence-free Finite Elements"
+journal  = "(_SIAM Student Paper Prize 2000_) SIAM Journal of Scientific Computing **23**(5):1752-1776"
+link_url = "http://www.maths.bath.ac.uk/preprints/maths0011.ps.gz"
+
+[[journal]]
+authors  = "K.A. Cliffe, I.G. Graham, R. Scheichl, and L. Stals"
+date     = "2000"
+title    = "Parallel Computation of Flow in Heterogeneous Media Modelled by Mixed Finite Elements"
+journal  = "Journal of Computational Physics **164**:258-282"
+link_url = "http://www.maths.bath.ac.uk/preprints/maths9916.ps.gz"
+
+[[journal]]
+authors  = "R. Scheichl"
+date     = "2000"
+title    = "Parallel Solvers for the Transient Multigroup Neutron Diffusion Equations"
+journal  = "International Journal for Numerical Methods in Engineering **47**:1751-1771"
+link_url = "http://www.maths.bath.ac.uk/preprints/maths9830.ps.gz"
+ 

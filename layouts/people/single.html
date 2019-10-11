@@ -1,7 +1,9 @@
 {{- define "main" -}}
 <div class="person flex flex-col md:flex-row">
   <div class="avatar">
+    {{ if .Params.avatar }}
     <img src="{{ .Params.avatar | absURL }}" />
+    {{ end }}
     <div class="name text-lg">{{ .Params.Name | upper | markdownify }}</div>
     <div class="mail">{{ .Params.Email | markdownify }}</div>
     <div class="phone">{{ .Params.Phone | markdownify }}</div>
@@ -10,8 +12,13 @@
   <div class="description md:ml-6 sm:m-6">
     <emph class="font-semibold">Research interests</emph>
     <hr />
-    <p class="text-sm">{{ .Params.Description }}</p>
+    <p class="text-sm">{{ .Params.research_interest }}</p>
+    {{ $researchURL := relURL (printf "%s%s" "research?author=" .Params.pub_name ) }}
+    <p class="text-sm mt-4">
+      See <a href="{{ $researchURL }}">publications</a>.
+    </p>
   </div>
 </div>
 
 {{ end }}
+ 
