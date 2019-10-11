@@ -1,0 +1,71 @@
+[[thesis]]
+authors     = "S. Kynaston"
+date        = "2019"
+title       = "Multiscale Modelling and Stochastic Uncertainty Quantification with Application to Eigenvalue Problems in Aerospace Composites"
+thesis_info = "MPhil Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/SKynastonMPhil.pdf"
+
+[[thesis]]
+authors     = "M.J. Parkinson"
+date        = "2018"
+title       = "Uncertainty Quantification in Radiative Transport"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/parkinson_thesis.pdf"
+
+[[thesis]]
+authors     = "G. Katsiolides"
+date        = "2018"
+title       = "Multilevel Monte Carlo Methods in Atmospheric Dispersion Modelling"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/Katsiolides_thesis.pdf"
+
+[[thesis]]
+authors     = "S.E. Cook"
+date        = "2013"
+title       = "Multilevel Monte Carlo Methods for Atmospheric Dispersion Modelling"
+thesis_info = "MPhil Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/SCookMPhilThesis-Final.pdf"
+
+[[thesis]]
+authors     = "A.L. Teckentrup"
+date        = "2013"
+title       = "Multilevel Monte Carlo Methods and Uncertainty Quantification"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/Teckentrup_PhD.pdf"
+
+[[thesis]]
+authors     = "E. Dodgson"
+date        = "2011"
+title 	    = "Thermoconvective Instability in Porous Media"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/UnivBath_PhD_2011_E.Dodgson.pdf"
+
+[[thesis]]
+authors     = "S.D. Buckeridge"
+date        = "2010"
+title       = "Numerical Solution of Weather and Climate Systems"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/sean_thesis.pdf"
+
+[[thesis]]
+authors     = "R. Norton"
+date        = "2008"
+title       = "Numerical Computation of Band Gaps in Photonic Crystal Fibres"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PDF"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/Norton_PhD.pdf"
+
+[[thesis]]
+authors     = "R. Scheichl"
+date        = "2000"
+title       = "Iterative Solution of Saddle Point Problems Using Divergence-free Finite Elements with Applications to Groundwater Flow"
+thesis_info = "PhD Thesis, University of Bath"
+link_name   = "PostScript file (without large colour pictures)"
+link_url    = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/thesis.ps.gz"

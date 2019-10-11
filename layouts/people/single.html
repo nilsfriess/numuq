@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<div class="person flex flex-col md:flex-row">
+  <div class="avatar">
+    <img src="{{ .Params.avatar | absURL }}" />
+    <div class="name text-lg">{{ .Params.Name | upper | markdownify }}</div>
+    <div class="mail">{{ .Params.Email | markdownify }}</div>
+    <div class="phone">{{ .Params.Phone | markdownify }}</div>
+    <div class="room">Room: {{ .Params.Room | markdownify }}</div>
+  </div>
+  <div class="description md:ml-6 sm:m-6">
+    <emph class="font-semibold">Research interests</emph>
+    <hr />
+    <p class="text-sm">{{ .Params.Description }}</p>
+  </div>
+</div>
+
+{{ end }}

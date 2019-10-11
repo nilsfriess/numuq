@@ -1,21 +1,30 @@
 {{- define "main" -}}
-<div class="person flex flex-col md:flex-row">
+<div class="home flex flex-col md:flex-row">
   <div class="avatar">
-    <img src="{{ .Params.avatar }}" />
-    <div class="name text-lg">{{ .Params.Name | markdownify }}</div>
-    <div class="mail">{{ .Params.Email | markdownify }}</div>
-    <div class="phone">{{ .Params.Phone | markdownify }}</div>
-    <div class="room">Room: {{ .Params.Room | markdownify }}</div>
-  </div>
-  <div class="description md:ml-6 sm:m-6">
-    <emph class="font-semibold">Research interests</emph>
-    <hr />
-    <p class="text-sm">{{ .Params.Description }}</p>
+    <img src="{{ .Params.avatar | absURL }}" />
     <div class="address">
       <h1 class="font-semibold">Postal address</h1>
       <hr />
       <p class="text-sm">{{ .Params.address | markdownify }}</p>
     </div>
+    <div class="secretary">
+      <h1 class="font-semibold">Secretary address</h1>
+      <hr />
+      <p class="text-sm">{{ .Params.secretary | markdownify }}</p>
+    </div>
+  </div>
+  <div class="description md:ml-6 sm:m-6">
+    <emph class="font-semibold">Research interests</emph>
+    <hr />
+    <ul class="research">
+      {{ range .Params.research_area }}
+      <li class="area red-border">
+        <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph
+        ><br />
+        <p class="font-thin text-sm">{{ .description | markdownify }}</p>
+      </li>
+      {{ end }}
+    </ul>
   </div>
 </div>
 

@@ -7,7 +7,7 @@
   <div class="text-xl">Head of Group</div>
   <ul class="red-border">
     <li class="student">
-      <a href="/" class="font-semibold hover:text-red-700"
+      <a href="{{ .Params.name }}" class="font-semibold hover:text-red-700"
         >{{ .Params.prof | markdownify }}</a
       ><br />
       <p class="font-thin">{{ .Params.description | markdownify }}</p>

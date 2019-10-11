@@ -1,0 +1,31 @@
+[[book]]
+authors   = "M. Cullen, M.A. Freitag, S. Kindermann and R. Scheichl (Editors)"
+date      = "2013"
+title     = "Large Scale Inverse Problems: Computational Methods and Applications in the Earth Sciences"
+pub_info  = "Radon Series on Computational and Applied Mathematics, Vol. 13, De Gruyter, Berlin"
+link_name = "De Gruyter Link"
+link_url  = "http://www.degruyter.com/view/product/182025"
+
+[[book]]
+authors   = "Bastian, J. Kraus, R. Scheichl and M.F. Wheeler (Editors)"
+date      = "2013"
+title     = "Simulation of Flow in Porous Media: Applications in Energy and Environment"
+pub_info  = "Radon Series on Computational and Applied Mathematics, Vol. 12, De Gruyter, Berlin"
+link_name = "De Gruyter Link"
+link_url  = "http://www.degruyter.com/view/product/182024"
+
+[[book]]
+authors   = "I.G. Graham, T.Y. Hou, O. Lakkis and R. Scheichl (Editors)"
+date      = "2012"
+title     = "Numerical Analysis of Multiscale Problems"
+pub_info  = "Lecture Notes in Computational Science and Engineering, Vol. 83, Springer, Heidelberg"
+link_name = "Springer Link"
+link_url  = "http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-22060-9"
+
+[[book]]
+authors   = "R. Scheichl"
+date      = "1997"
+title     = "Parallel Solution of the Transient Multigroup Neutron Diffusion Equations with Multi-Grid and Preconditioned Krylov-Subspace Methods (Master's Thesis)"
+pub_info  = "Schriften der Johannes Kepler Universitaet Linz, Vol. **C21**, Trauner-Verlag, Linz"
+link_name = "PostScript file (without large colour picture)"
+link_url  = "https://ganymed.math.uni-heidelberg.de/~rscheichl/theses/diplom.ps.gz"

@@ -1,0 +1,27 @@
+[[journal]]
+authors  = "H. Kobayashi, P. Rohrbach, R. Scheichl, N. Wilding and R. Jack"
+date     = "2019"
+title    = "Correction of Coarse-Graining Errors by a Two-Level Method: Application to the Asakura-Oosawa Model"
+journal  = "to appear in Journal of Chemical Physics"
+link_url = "https://arxiv.org/abs/1907.07912"
+
+[[journal]]
+authors  = "T.J. Dodwell, C. Ketelsen, R. Scheichl and A.L. Teckentrup"
+date     = "2019"
+title    = "Multilevel Markov Chain Monte Carlo"
+journal  = "SIAM Review **61**(3):509-545"
+link_url = "http://arxiv.org/abs/1808.02639"
+
+[[journal]]
+authors  = "A.D. Gilbert, I.G. Graham, F.Y. Kuo, R. Scheichl and I.H. Sloan"
+date     = "2019"
+title    = "Analysis of Quasi-Monte Carlo Methods for Elliptic Eigenvalue Problems with Stochastic Coefficients"
+journal  = "to appear in Numerische Mathematik"
+link_url = "http://arxiv.org/abs/1808.02639"
+
+[[journal]]
+authors  = "S. Dolgov and R. Scheichl"
+date     = "2019"
+title    = "A Hybrid Alternating Least Squares - TT Cross Algorithm for Parametric PDEs"
+journal  = "SIAM/ASA Journal on Uncertainty Quantification **7**(1):260-291"
+link_url = "https://arxiv.org/abs/1707.04562"

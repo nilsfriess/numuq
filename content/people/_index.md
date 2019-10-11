@@ -4,7 +4,8 @@ affiliated_title = "Affiliated Members"
 
 # head of group  
 prof = "Prof. Robert Scheichl"
-description = "Professor for Numerical Analysis and Uncertainty Quantficiation" 
+description = "Professor for Numerical Analysis and Uncertainty Quantficiation"
+name = "rob"  
 
 # Members in Heidelberg 
 [[phd]]

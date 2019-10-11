@@ -16,16 +16,17 @@ main {
     width: 100%; 
     max-width: 960px;
     margin: 0 auto;
+    padding-left: 98px;
 }
 
-.person {
+.person, .home {  
     align-items: begin;
 }
 
-.person .avatar {
+.person .avatar, .home .avatar {
     min-width: 320px;
     margin-top: 32px;
-    flex-grow: 1;
+    flex-grow: 1; 
 }
 
 .person .description {
@@ -62,7 +63,7 @@ hr {
     margin-bottom: 12px;
 }
 
-.members ul, .pastmembers ul, .events ul, .visitors ul, .teaching ul, .lecture ul {
+.members ul, .pastmembers ul, .events ul, .visitors ul, .teaching ul, .lecture ul, .research ul {
     margin-left: 18px; 
     margin-bottom: 36px;
 }
@@ -95,7 +96,7 @@ a.active {
     font-weight: 700;
 }
 
-.teaching div.term, ul.red-border {
+.teaching div.term, ul.red-border, li.red-border {
     padding-left: 12px;
     border-left: 1px solid #c53030;
 }
@@ -118,4 +119,39 @@ a.active {
 }
 .lecture li a:hover {
     color: black;
+}
+
+li.area {
+    margin-bottom: 18px;
+    margin-left: 18px;
+}
+
+.secretary {
+    margin-top: 24px;
+    margin-bottom:24px;
+}
+
+.address p.text-sm, .secretary p.text-sm {
+    margin-left: 18px;
+}
+
+.research li {
+    margin-bottom: 12px;
+}
+
+.research .text-2xl {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.research .header-input .header {
+    margin-right: 48px;
+}
+
+.research .header-input {
+    display: flex;
+}
+
+.research a {
+    color: #c53030;
 }
