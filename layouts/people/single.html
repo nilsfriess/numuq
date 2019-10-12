@@ -8,6 +8,9 @@
     <div class="mail">{{ .Params.Email | markdownify }}</div>
     <div class="phone">{{ .Params.Phone | markdownify }}</div>
     <div class="room">Room: {{ .Params.Room | markdownify }}</div>
+    {{ if .Params.cv }}
+    <a class="block text-center" href="{{ .Params.cv | absURL }}">Curriculum Vitae</a>
+    {{ end }}
   </div>
   <div class="description md:ml-6 sm:m-6">
     <emph class="font-semibold">Research interests</emph>
@@ -15,7 +18,13 @@
     <p class="text-sm">{{ .Params.research_interest }}</p>
     {{ $researchURL := relURL (printf "%s%s" "research?author=" .Params.pub_name ) }}
     <p class="text-sm mt-4">
-      See <a href="{{ $researchURL }}">publications</a>.
+      See <a href="{{ $researchURL }}">publications</a>
+      {{ if .Params.google_scholar }}
+      (or my page on 
+      <a href="{{ .Params.google_scholar }}">Google Scholar</a>).
+      {{ else }}
+      .
+      {{ end }}
     </p>
   </div>
 </div>

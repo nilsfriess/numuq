@@ -5,6 +5,7 @@ email = "?? (at) uni-heidelberg.de"
 phone = "+49 6221 54141??"
 room = "1 / 3.20 (Mathematikon)"
 # avatar = "img/gianluca.jpeg"
+google_scholar = "https://scholar.google.de/citations?user=68BNz2EAAAAJ"
 
 pub_name = "Detommaso" # should be the last name
 

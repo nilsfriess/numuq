@@ -1,4 +1,9 @@
 {{- define "main" -}}
+<h3 class="text-xl">
+  Welcome to the Homepage of the research group
+  <b>Numerical Analysis and Uncertainty Quantification</b> at University of
+  Heidelberg
+</h3>
 <div class="home flex flex-col md:flex-row">
   <div class="avatar">
     <img src="{{ .Params.avatar | absURL }}" />
@@ -15,8 +20,7 @@
   </div>
   <div class="description md:ml-6 md:mt-8 sm:ml-0 sm:mt-4">
     <emph class="font-semibold">Research interests</emph>
-    <hr />
-    <ul class="research">
+    <ul class="research mt-1">
       {{ range .Params.research_area }}
       <li class="area red-border">
         <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph

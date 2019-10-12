@@ -1,7 +1,7 @@
 +++ 
 title = "Arne Strehlow"
 name = "Arne **Strehlow**"
-email = "?? (at) uni-heidelberg.de"
+email = "a.strehlow (at) uni-heidelberg.de"
 phone = "+49 6221 54141??"
 room = "1 / 3.20 (Mathematikon)"
 # avatar = "img/arne.jpeg"

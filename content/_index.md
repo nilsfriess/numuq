@@ -1,6 +1,6 @@
 +++ 
 title = "Home"
-avatar = "img/group.png"
+avatar = "img/group.jpg"
 
 address = """
 Institute of Applied Mathematics and<br>

@@ -101,12 +101,13 @@ a.active {
     border-left: 1px solid #c53030;
 }
 
-.lecture-item a {
+.lecture-item a:hover {
     color: #c53030;
 }
 
-.lecture-item a:hover {
+.lecture-item a {
     color: black;
+    text-decoration: underline;
 }
 
 .lecture ul {

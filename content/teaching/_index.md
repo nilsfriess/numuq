@@ -12,7 +12,8 @@ title = "Teaching"
     title = "Multiscale Methods & Homogenisation Theory"
 
   [[term.lecture]]
-    title = "Seminar: Numerical Methods for ODEs"
+    title = "(Pro-)Seminar: Numerical Methods for ODEs: Geometric Numerical Integration"
+    page = "seminarODE1920"
 
 [[term]]
   title = "SoSe 2019"
@@ -35,4 +36,9 @@ title = "Teaching"
 
   [[term.lecture]]
     title = "Compact Graduate Course given at University of Heidelberg 11-17 June 2015"
+    page = "CompactUQ2015"
+
+  [[term.lecture]]
+    title = "IWR School 2019 ML4Nature \"A Crash Course in Machine Learning with Applications in Natural and Life Sciences\", Heidelberg University, 23-27 September 2019"
+    page = "MLCourse2019"
 +++  

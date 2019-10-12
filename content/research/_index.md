@@ -1,5 +1,3 @@
 +++
 title = "Research"
 +++
-
-Test research
