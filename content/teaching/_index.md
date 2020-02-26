@@ -6,14 +6,23 @@ title = "Teaching"
   title = "WS 2019/20"
   [[term.lecture]]
     title = "Finite Elements (Numerik 2)"
-    page = "FiniteElements1920"			# name of the detail page
+    # Link to Moodle page (not required)
+    moodle = "https://elearning2.uni-heidelberg.de/course/view.php?id=23383"
+    # Link to LSF page (not required)
+    lsf = "https://lsf.uni-heidelberg.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=307103&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung"
+    # Filename of lecture notes (or any other document; also not required)
+    notes = ""
+    notes_name = "Lecture Notes"
 
   [[term.lecture]]
     title = "Multiscale Methods & Homogenisation Theory"
+    moodle = "https://elearning2.uni-heidelberg.de/course/view.php?id=23384"
+    lsf = "https://lsf.uni-heidelberg.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=307099&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung"
 
   [[term.lecture]]
     title = "(Pro-)Seminar: Numerical Methods for ODEs: Geometric Numerical Integration"
-    page = "seminarODE1920"
+    notes = "https://ganymed.math.uni-heidelberg.de/~rscheichl/symplectic-sem_flyer.pdf"
+    notes_name = "Information and References"
 
 [[term]]
   title = "SoSe 2019"

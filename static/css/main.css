@@ -1,40 +1,85 @@
 html, body {
     font-family: Montserrat,sans-serif;
-    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
+/*******************************
+* Navbar setup
+*******************************/
 nav#nav  {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    width: 100%;
+    min-height: 5rem;
+    width: 100vw;
+    max-width: 100%;
 }
 
 nav .nav-title {
     max-width: calc(100vw - 120px);
 }
 
+/*******************************
+* Main setup
+*******************************/
 main {
-    width: 100%; 
-    max-width: 960px;
-    margin: 0 auto;
-    padding-left: 98px;
+    max-width: 768px;
 }
 
-.person, .home {  
-    align-items: begin;
+/*******************************
+* Footer setup
+*******************************/
+#container {
+    position: relative;
 }
 
-.person .avatar, .home .avatar {
-    min-width: 320px;
+#content-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+    min-height: calc(100vh - 5rem);
+}
+
+#footer {
+    position:absolute;
+    bottom: 0;
+    height: 4rem;
+    box-shadow: 0px -0.2px 6px 0px rgba(0,0,0,0.75);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 1.3rem;
+    margin: 0;
+    width: 100vw;
+    max-width: 100%; 
+}
+
+@media only screen and (max-width: 480px) {
+    #footer {
+	flex-direction: column;
+	justify-content: center;
+	height: 5rem;
+    }
+
+    #footer div:first-child {
+	margin-bottom: 8px;
+    }
+}
+
+/*******************************
+* Home page setup
+*******************************/
+.home .address {
     margin-top: 32px;
-    flex-grow: 1; 
 }
 
+/*******************************
+* Person page setup
+*******************************/
 .person .description {
+    margin-top: 2rem;
     flex-grow: 2;
-} 
- 
-.address {
-    margin-top: 24px;
 }
 
 .person .name, .person .mail, .person .phone, .person .room {
@@ -46,35 +91,33 @@ main {
     margin-bottom: 16px;
 }
 
-.avatar img {
-    object-fit: cover;
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    margin: 0 auto 16px auto;
+/*******************************
+* Publications page setup
+*******************************/
+.publications {
 }
 
-hr {
-    width: 60%;
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.publications li {
     margin-bottom: 12px;
 }
 
-.members ul, .pastmembers ul, .events ul, .visitors ul, .teaching ul, .lecture ul, .research ul {
-    margin-left: 18px; 
-    margin-bottom: 36px;
+.publications .text-2xl {
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
-.members li, .pastmembers li, .events li, .visitors li, .teaching li, .lecture li {
-    margin-bottom: 12px;  
+.publications .header-input .header {
+    margin-right: 48px;
 }
 
-li.event, .pastmembers li.student {
-    margin-bottom: 24px;
+.publications .header-input {
+    display: flex;
+} 
+
+.publications a {
+    color: #c53030;
 }
+
 
 .members .header, .visitors .header, .teaching .header {
     margin-bottom: 16px;
@@ -96,7 +139,7 @@ a.active {
     font-weight: 700;
 }
 
-.teaching div.term, ul.red-border, li.red-border {
+.teaching div.term, ul.red-border, li.red-border, p.red-border {
     padding-left: 12px;
     border-left: 1px solid #c53030;
 }
@@ -122,37 +165,47 @@ a.active {
     color: black;
 }
 
-li.area {
-    margin-bottom: 18px;
-    margin-left: 18px;
-}
-
 .secretary {
     margin-top: 24px;
     margin-bottom:24px;
 }
 
-.address p.text-sm, .secretary p.text-sm {
-    margin-left: 18px;
+.lecture-links {
+    display: block; 
 }
 
-.research li {
+
+/*******************************
+* MISC
+*******************************/
+.avatar {
+    min-width: 320px;
+    margin-top: 32px;
+    flex-grow: 1; 
+}
+
+.avatar img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 16px auto;
+}
+
+hr {
+    width: 60%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 12px;
 }
 
-.research .text-2xl {
-    margin-top: 16px;
-    margin-bottom: 8px;
-}
-
-.research .header-input .header {
-    margin-right: 48px;
-}
-
-.research .header-input {
-    display: flex;
-}
-
-.research a {
-    color: #c53030;
+.members li,
+.pastmembers li,
+.events li,
+.visitors li,
+.teaching li,
+.lecture li {
+    margin-bottom: 12px;  
 }

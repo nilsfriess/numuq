@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ partial "head.html" . }}
+</script>
   <body>
     {{ partial "navbar.html" . }}
-    <div class="container">
-      <main id="main" class="p-6">
-        {{ block "main" . }}{{ end }}
-      </main>
+    <div id="container">
+      <div id="content-wrap">
+        <main id="main" class="p-8">
+          {{ block "main" . }}{{ end }}
+        </main>
+      </div>
+      {{ partial "footer.html" }}
     </div>
-    {{ partial "footer.html" }}
   </body>
 </html>

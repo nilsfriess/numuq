@@ -17,9 +17,9 @@ title = "Home"
     weight = -250 
 
   [[menu.main]]
-    identifier = "visitors"
-    name = "Visitors"
-    url = "/visitors/"
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
     weight = -200
 
   [[menu.main]]
@@ -35,5 +35,8 @@ title = "Home"
     weight = -90 
  
 [params]
-  pageTitle = "Numerical Analysis and UQ"  
+  pageTitle = "Numerical Analysis and UQ"
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
 

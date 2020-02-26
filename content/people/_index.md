@@ -7,12 +7,7 @@ prof = "Prof. Robert Scheichl"
 description = "Professor for Numerical Analysis and Uncertainty Quantficiation"
 name = "rob"  
 
-# Members in Heidelberg 
-[[phd]]
-  name = "Gianluca Detommaso"
-  topic = "Accelerating Bayesian Sampling in Uncertainty Quantification"
-  page = "gianluca"
-  
+# Members in Heidelberg   
 [[phd]]
   name = "Arne Strehlow"
   topic = "High-level Geometric Priors in Bayesian Inference for PDE Problems"
@@ -27,6 +22,11 @@ name = "rob"
   name = "Chupeng Ma"
   topic = "Multiscale Numerical Methods and Analysis"
   page = "chupeng"
+
+[[postdoc]]
+  name = "Tobias Siems"
+  topic = ""
+  page = "tobias"
 
 # Affiliated members
 

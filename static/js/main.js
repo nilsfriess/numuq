@@ -4,26 +4,26 @@ document.querySelector("#menu-button").onclick = () => {
 };
 
 // If on research page, handle author filtering
-if (window.location.pathname.split("/")[1] === "research") {
-  // extract author from url params (used in personal pages to link to their publications)
+if (window.location.pathname.split("/")[1] === "publications") { 
+  // extract author from url params (used in personal pages to link to their publications) 
   const urlParams = new URLSearchParams(window.location.search);
   const authorQuery = urlParams.get("author");
 
   // Hide all warnings by default
   document
-    .querySelectorAll(".research .warning")
+    .querySelectorAll(".publications .warning")
     .forEach(div => (div.style.display = "none"));
 
   let filterString = "";
   const authorInput = document.querySelector("#authorinput");
-  const publications = Array.from(document.querySelectorAll(".research li"));
+  const publications = Array.from(document.querySelectorAll(".publications li"));
 
   const handleOutput = () => {
     publications.forEach(pub => (pub.style.display = "block"));
     filterString = authorInput.value.toLowerCase().trim();
     if (filterString === "") {
       document
-        .querySelectorAll(".research .warning")
+        .querySelectorAll(".publications .warning")
         .forEach(div => (div.style.display = "none"));
       return;
     }
@@ -63,45 +63,45 @@ if (window.location.pathname.split("/")[1] === "research") {
     });
 
     if (preprints.length == 0)
-      document.querySelector(".research .preprints .warning").style.display =
+      document.querySelector(".publications .preprints .warning").style.display =
         "block";
     else
-      document.querySelector(".research .preprints .warning").style.display =
+      document.querySelector(".publications .preprints .warning").style.display =
         "none";
 
     if (journals.length == 0)
-      document.querySelector(".research .journals .warning").style.display =
+      document.querySelector(".publications .journals .warning").style.display =
         "block";
     else
-      document.querySelector(".research .journals .warning").style.display =
+      document.querySelector(".publications .journals .warning").style.display =
         "none";
 
     if (books.length == 0)
-      document.querySelector(".research .books .warning").style.display =
+      document.querySelector(".publications .books .warning").style.display =
         "block";
     else
-      document.querySelector(".research .books .warning").style.display =
+      document.querySelector(".publications .books .warning").style.display =
         "none";
 
     if (proceedings.length == 0)
-      document.querySelector(".research .proceedings .warning").style.display =
+      document.querySelector(".publications .proceedings .warning").style.display =
         "block";
     else
-      document.querySelector(".research .proceedings .warning").style.display =
+      document.querySelector(".publications .proceedings .warning").style.display =
         "none";
 
     if (theses.length == 0)
-      document.querySelector(".research .theses .warning").style.display =
+      document.querySelector(".publications .theses .warning").style.display =
         "block";
     else
-      document.querySelector(".research .theses .warning").style.display =
+      document.querySelector(".publications .theses .warning").style.display =
         "none";
 
     if (other.length == 0)
-      document.querySelector(".research .other .warning").style.display =
+      document.querySelector(".publications .other .warning").style.display =
         "block";
     else
-      document.querySelector(".research .other .warning").style.display =
+      document.querySelector(".publications .other .warning").style.display =
         "none";
   };
 

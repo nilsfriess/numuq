@@ -5,17 +5,36 @@
   <div class="text-xl">Current Term ({{ .title }})</div>
   <hr />
   <ul class="list-disc list-outside">
-    {{ range .lecture }} {{ if isset . "page" }}
+    {{ range .lecture }}
     <li class="lecture-item">
-      <a href="{{ .page | lower }}">
-        {{ .title | markdownify }}
-      </a>
+      <span class="lecture-title">
+	<b>{{ .title | markdownify }}</b>
+      </span>
+      <span class="lecture-links">
+	{{ if isset . "moodle" }}
+	<a href="{{ .moodle }}">Moodle</a>
+	{{ end }}
+	{{ if (and (isset . "moodle") (isset . "lsf")) }}
+	|
+	{{ end }}
+	{{ if isset . "lsf" }}
+	<a href="{{ .lsf }}">LSF</a> 
+	{{ end }}
+	{{ if (and (isset . "lsf") (isset . "notes")) }}
+	|
+	{{ end }}
+	{{ if isset . "notes" }}
+	<a href="{{ .notes }}">{{ .notes_name }}</a> 
+	{{ end }}
+	{{ if (and (isset . "notes") (isset . "page")) }}
+	|
+	{{ end }}
+	{{ if isset . "page" }}
+	<a href="{{ .page | lower }}">Additional Information</a>  
+	{{ end }}
+      </span>
     </li>
-    {{ else }}
-    <li class="lecture-item">
-      {{ .title | markdownify }}
-    </li>
-    {{ end }} {{ end }}
+    {{ end }}
   </ul>
   {{ end }}
   <div class="text-xl">Past Terms</div>

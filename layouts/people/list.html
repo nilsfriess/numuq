@@ -5,7 +5,7 @@
 
   {{ if isset .Params "prof" }}
   <div class="text-xl">Head of Group</div>
-  <ul class="red-border">
+  <ul class="red-border ml-1">
     <li class="student">
       <a href="{{ .Params.name }}" class="font-semibold hover:text-red-700"
         >{{ .Params.prof | markdownify }}</a
@@ -15,7 +15,7 @@
   </ul>
   {{ end }} {{ if isset .Params "postdoc" }}
   <div class="text-xl">Postdocs</div>
-  <ul class="red-border">
+  <ul class="red-border ml-1">
     {{ range .Params.postdoc }}
     <li class="student">
       {{ if .page }}
@@ -31,7 +31,7 @@
   </ul>
   {{ end }} {{ if isset .Params "phd" }}
   <div class="text-xl">PhD Students</div>
-  <ul class="red-border">
+  <ul class="red-border ml-1">
     {{ range .Params.phd }}
     <li class="student">
       {{ if .page }}
@@ -48,10 +48,10 @@
   {{ end }}
 </div>
 
-<div class="members">
+<div class="members mt-6">
   {{ if isset .Params "member" }}
   <div class="header text-3xl">{{ .Params.affiliated_title }}</div>
-  <ul class="list-outside red-border">
+  <ul class="list-outside red-border ml-1">
     {{ range .Params.member }}
     <li class="student">
       <emph class="font-semibold">{{ .name | markdownify }}</emph>
@@ -78,9 +78,4 @@
   </ul>
   {{ end }}
 </div>
-
-{{ if not (isset .Params "identifier") }}
-<a href="past" class="header underline text-xl hover:text-red-700">
-  List of Past Group Members
-</a>
-{{ end }} {{ end }}
+{{ end }}

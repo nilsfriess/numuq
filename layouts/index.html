@@ -8,21 +8,21 @@
   <div class="avatar">
     <img src="{{ .Params.avatar | absURL }}" />
     <div class="address">
-      <h1 class="font-semibold">Postal address</h1>
-      <hr />
-      <p class="text-sm">{{ .Params.address | markdownify }}</p>
+      <h1 class="font-semibold mb-1">Postal address</h1>
+      <p class="text-sm red-border ml-1">{{ .Params.address | markdownify }}</p>
     </div>
     <div class="secretary">
-      <h1 class="font-semibold">Secretary address</h1>
-      <hr />
-      <p class="text-sm">{{ .Params.secretary | markdownify }}</p>
+      <h1 class="font-semibold mb-1">Secretary</h1>
+      <p class="text-sm red-border ml-1">
+        {{ .Params.secretary | markdownify }}
+      </p>
     </div>
   </div>
   <div class="description md:ml-6 md:mt-8 sm:ml-0 sm:mt-4">
     <emph class="font-semibold">Research interests</emph>
-    <ul class="research mt-1">
+    <ul class="research mt-1 ml-1">
       {{ range .Params.research_area }}
-      <li class="area red-border">
+      <li class="area red-border mb-3">
         <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph
         ><br />
         <p class="font-thin text-sm">{{ .description | markdownify }}</p>

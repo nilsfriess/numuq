@@ -1,6 +1,6 @@
 +++ 
-title = "Alec Gilbert"
-name = "Alexander **Gilbert**"
+first_name = "Alexander"
+last_name = "Gilbert"
 email = "a.gilbert (at) uni-heidelberg.de"
 phone = "+49 6221 54141??"
 room = "1 / 3.16 (Mathematikon)"
