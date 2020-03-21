@@ -20,7 +20,7 @@
     <hr />
     <!-- TODO: MAKE LISTS WORK (probably CSS issue)-->
     <p class="text-sm">{{ .Params.research_interest | markdownify }}</p>
-    {{ $researchURL := relURL (printf "%s%s" "research?author=" .Params.pub_name ) }}
+    {{ $researchURL := relURL (printf "%s%s" "publications?author=" .Params.pub_name ) }}
     <p class="text-sm mt-4">
       See <a href="{{ $researchURL }}">publications</a>
       {{ if .Params.google_scholar }}
@@ -28,7 +28,7 @@
       <a href="{{ .Params.google_scholar }}">Google Scholar</a>).
       {{ else }}
       .
-      {{ end }}
+      {{ end }} 
     </p>
   </div>
 </div>

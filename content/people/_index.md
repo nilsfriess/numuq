@@ -10,21 +10,21 @@ name = "rob"
 # Members in Heidelberg   
 [[phd]]
   name = "Arne Strehlow"
-  topic = "High-level Geometric Priors in Bayesian Inference for PDE Problems"
+  topic = "Geometric Priors in inverse PDE Problems"
   page = "arne"
   
 [[postdoc]]
-  name = "Alec Gilbert"
-  topic = "Quasi-Monte Carlo and Uncertainty Quantification for Eigenproblems"
+  name = "Dr. Alexander D. Gilbert"
+  topic = "High-dimensional Integration, Numerical Analysis, Uncertainty Quantification"
   page = "alec"
  
 [[postdoc]]
-  name = "Chupeng Ma"
-  topic = "Multiscale Numerical Methods and Analysis"
+  name = "Dr. Chupeng Ma"
+  topic = "Homogenization, Multiscale Methods, Finite Element Method"
   page = "chupeng"
 
 [[postdoc]]
-  name = "Tobias Siems"
+  name = "Dr. Tobias Siems"
   topic = ""
   page = "tobias"
 
