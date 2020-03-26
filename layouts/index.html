@@ -21,12 +21,12 @@
   <div class="description md:ml-6 md:mt-8 sm:ml-0 sm:mt-4">
     <emph class="font-semibold">Research interests</emph>
     <ul class="research-entries mt-1 ml-1">
-      {{ range .Params.research_area }}
+      {{ range .Site.Data.research.texts.research_area }}
       <li class="area red-border mb-3">
         <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph>
-        <p class="font-thin text-sm crop description">
-          {{ .description | safeHTML }}
-        </p>
+        <div class="font-thin text-sm crop description">
+          {{ .description | markdownify }}
+        </div>
         <a class="font-thin text-sm show-more" onclick="showResearch({{ .name }})">Show more</a>
       </li>
       {{ end }}

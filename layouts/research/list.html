@@ -2,14 +2,14 @@
 <div class="research">
   <div class="header text-3xl">{{ .Title }}</div>
   <ul class="research mt-1 ml-1">
-    {{ range .Params.research_area }}
-    <li class="area red-border mb-6">
+    {{ range .Site.Data.research.texts.research_area }}
+    <li class="area red-border mb-10">
       <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph><br />
-      <p class="font-thin text-sm">{{ .description | markdownify }}</p>
+      <div class="font-thin text-sm description">{{ .description | markdownify }}</div>
       <p class="font-bold mt-4 text-sm">Sample publications</p>
       <ul class="sample-publications list-disc list-inside text-sm">
         {{ range .publications }}
-        <li class="my-1"><span>{{ . | markdownify }}</span></li>
+        <li class="my-1 text-sm"><span>{{ . | markdownify }}</span></li>
         {{ end }}
       </ul>
     </li>

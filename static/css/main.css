@@ -74,17 +74,29 @@ main {
     margin-top: 32px;
 }
 
-.home .research-entries p.crop {
+.home .research-entries div.crop {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 5;
 }
+
+.home .research-entries div.crop p {
+    display: none;
+}
+
+.home .research-entries div.crop p:first-child {
+    display: initial;
+}
  
 .home .research-entries li a {
-    cursor: pointer;
+    cursor: pointer; 
     color: #c53030;
+}
+
+.home .description p {
+    margin-bottom: 1em; 
 }
 
 /*******************************
@@ -110,6 +122,19 @@ main {
 .research ul.sample-publications {
     text-indent: calc(11px - 2em);
     margin-left: 2em;
+}
+
+.research div.description p {
+    margin-top: 1em;
+}
+
+.research div.description ol {
+    list-style-type: lower-alpha;
+    margin-left: 2em;
+}
+
+.research div.description ol li {
+    padding-left: 6px;
 }
 
 /*******************************
@@ -192,6 +217,7 @@ a.active {
 }
 
 .lecture-links {
+    margin-left: 22px;
     display: block; 
 }
 

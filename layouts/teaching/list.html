@@ -4,7 +4,7 @@
   {{ range first 1 .Params.term }}
   <div class="text-xl">Current Term ({{ .title }})</div>
   <hr />
-  <ul class="list-disc list-outside">
+  <ul class="list-disc list-inside">
     {{ range .lecture }}
     <li class="lecture-item">
       <span class="lecture-title">
@@ -15,19 +15,19 @@
 	<a href="{{ .moodle }}">Moodle</a>
 	{{ end }}
 	{{ if (and (isset . "moodle") (isset . "lsf")) }}
-	|
+	&nbsp;|&nbsp;
 	{{ end }}
 	{{ if isset . "lsf" }}
 	<a href="{{ .lsf }}">LSF</a> 
 	{{ end }}
 	{{ if (and (isset . "lsf") (isset . "notes")) }}
-	|
+	&nbsp;|&nbsp;
 	{{ end }}
 	{{ if isset . "notes" }}
 	<a href="{{ .notes }}">{{ .notes_name }}</a> 
 	{{ end }}
 	{{ if (and (isset . "notes") (isset . "page")) }}
-	|
+	&nbsp;|&nbsp;
 	{{ end }}
 	{{ if isset . "page" }}
 	<a href="{{ .page | lower }}">Additional Information</a>  
