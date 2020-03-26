@@ -82,7 +82,7 @@ main {
    -webkit-line-clamp: 5;
 }
 
-.home .research-entries div.crop p {
+.home .research-entries div.crop p, .home .research-entries div.crop ol {
     display: none;
 }
 
@@ -98,6 +98,17 @@ main {
 .home .description p {
     margin-bottom: 1em; 
 }
+
+.home div.description ol {
+    list-style-type: lower-alpha;
+    margin-left: 2em;
+    margin-top: -1em;
+}
+
+.home div.description ol li {
+    padding-left: 6px;
+}
+
 
 /*******************************
 * Person page setup
@@ -131,6 +142,7 @@ main {
 .research div.description ol {
     list-style-type: lower-alpha;
     margin-left: 2em;
+    margin-bottom: -1em;
 }
 
 .research div.description ol li {

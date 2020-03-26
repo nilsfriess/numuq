@@ -42,7 +42,7 @@ In our group, we study and develop multiscale numerical methods that do not suff
   name = "Numerical Analysis & Scientific Computing"
   description = '''Scientific computing and numerical simulation are playing an ever more important role in science and technology. Hardly any new developments, e.g., in engineering or the geosciences, take place without careful mathematical modelling, analysis and optimisation. More and more complicated systems are being tackled, in particular in the life sciences or in the context of climate change. This requires continued research into efficient and robust numerical methods, especially in the context of heterogeneous or random media, and in their careful and rigorous numerical analysis. Increased efficiency requires a redesign of traditional algorithms to harness the power of modern many-core computing architectures (hardware-aware scientific computing), while data-driven (predictive) scientific computing poses new challenges for the robustness of existing methods.
 
-Here, the focus of our group encompasses 
+Here, the focus of our group encompasses
 
 1. traditional topics, such as efficient preconditioning and discretisation methods for heterogeneous and anisotropic PDEs, or efficient algorithms for large-scale eigenproblems, as well as   
 2. more modern topics that arise naturally in the context of uncertainty quantification or Bayesian inference, such as high-dimensional approximation and quadrature, including Monte Carlo, quasi-Monte Carlo, sparse grid, low-rank tensor approximation or deep learning.   
