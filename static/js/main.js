@@ -7,16 +7,26 @@ const updateURL = (entry) => {
     const link = entry.querySelector("a");
     if(link) {
         link.href = link.querySelector(".url").innerHTML;
-        console.log(link);
     }
 };
 
+const finishedBibtexProcessing = () => {
+    setTimeout(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const authorQuery = urlParams.get("author");
+        const authorInput = document.querySelector("input#authorinput");
+        
+        if (authorQuery !== null) {
+            authorInput.value = "@author=" + authorQuery;
+            const event = new Event('change');
+            authorInput.dispatchEvent(event);
+        }  
+    }, 100);
+}
+
 // If on research page, handle author filtering
 if (window.location.pathname.split("/")[1] === "publications") {
-    // if (authorQuery !== null) {
-    //     authorInput.value = authorQuery;
-    //     handleOutput();
-    // }
+    
 }
 
 const collapseAll = () => {

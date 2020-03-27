@@ -8,8 +8,9 @@
   <bibtex src="books.bib"></bibtex>
   <bibtex src="preprints.bib"></bibtex>
   <bibtex src="theses.bib"></bibtex>
-  <bibtex src="journals.bib"></bibtex> 
+  <bibtex src="journals.bib"></bibtex>
   <bibtex src="proceedings.bib"></bibtex>
+  <bibtex src="other.bib"></bibtex>
   
   <datalist id="suggests">
     <option value="@author=">
@@ -54,11 +55,18 @@
           <div class="templates"></div>
         </div>
       </div>
+      <hr class="my-8">
+      <div class="section misc">
+        <h1 class="text-2xl">Extended Abstracts and Other Publications</h1> 
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> 
 
   <div id="bibtex_errors"></div>
-  <div id="bibtex_display">
+  <div id="bibtex_display" callback="finishedBibtexProcessing(bibtex_display)">
     <div class="bibtex_template" callback="updateURL(bibtexentry)">
       <span class="if BIBTEXTYPEKEY==BOOK">
         <span class="author italic" conjunction=" and"></span> 
@@ -145,6 +153,19 @@
         <span class="if type"><span class="type"></span>,</span>
         <span class="if !type">PhD Thesis,</span>
         <span class="school"></span>
+        <span class="if !urlname">
+          [<a href="#">PDF<span class="url hidden"></span></a>]
+        </span>
+        <span class="if urlname">
+          [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+        </span>
+      </span>
+
+      <span class="if BIBTEXTYPEKEY==MISC">
+        <span class="author italic" conjunction=" and"></span> 
+        (<span class="year"></span>),
+        <span class="title font-bold"></span>,
+        <span class="notes"></span>
         <span class="if !urlname">
           [<a href="#">PDF<span class="url hidden"></span></a>]
         </span>
