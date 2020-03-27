@@ -2,111 +2,265 @@
 <div class="publications">
   <div class="header-input">
     <div class="header text-3xl">{{ .Title }}</div>
-    <input id="authorinput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Filter authors">
+    <input id="authorinput" class="bibtex_search shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Filter publications" list="suggests">
   </div>
-  {{ $publications := $.Site.Data.publications }}
-  {{ $preprints := (index $publications "preprints").preprint }}
-  {{ $books := (index $publications "books").book }}
-  {{ $journals := (index $publications "journals").journal }}
-  {{ $proceedings := (index $publications "proceedings").proceedings }}
-  {{ $theses := (index $publications "theses").thesis }}
-  {{ $other := (index $publications "other").other }}
-  <div class="preprints">
-    <div class="text-2xl">Preprints</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1">
-      {{ range $preprints }}
-      <li data-type="preprint" data-authors="{{ .authors }}"><i>{{ .authors }}</i>, <b>{{ .title | markdownify }}</b>, submitted {{ .date }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}
-	.
-      </li>
-      {{ end }} 
-    </ul>
-  </div>
-
-  <div class="journals">
-    <div class="text-2xl">Journals</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1"> 
-      {{ range $journals }} 
-      <li data-type="journal" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .journal | markdownify }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}.
-      </li>
-      {{ end }} 
-    </ul>
-  </div>
-
-  <div class="books">
-    <div class="text-2xl">Books</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1"> 
-      {{ range $books }} 
-      <li data-type="book" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .pub_info | markdownify }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}.
-      </li>
-      {{ end }} 
-    </ul>
+  
+  <bibtex src="books.bib"></bibtex>
+  <bibtex src="preprints.bib"></bibtex>
+  <bibtex src="theses.bib"></bibtex>
+  <bibtex src="journals.bib"></bibtex> 
+  <bibtex src="proceedings.bib"></bibtex>
+  
+  <datalist id="suggests">
+    <option value="@author=">
+    <option value="@title=">
+    <option value="@year=">
+    <option value="@journal=">
+  </datalist>
+  
+  <div class="bibtex_structure">
+    <div class="sections bibtextypekey">
+      <div class="section preprint">
+        <h1 class="text-2xl">Preprints</h1>
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
+      <hr class="my-8">
+      <div class="section article">
+        <h1 class="text-2xl">Journals</h1>
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
+      <hr class="my-8">
+      <div class="section book">
+        <h1 class="text-2xl">Books</h1>
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
+      <hr class="my-8">
+      <div class="section MastersThesis|PhdThesis">
+        <h1 class="text-2xl">Theses</h1> 
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
+      <hr class="my-8">
+      <div class="section inproceedings">
+        <h1 class="text-2xl">Proceedings</h1> 
+        <div class="sort year" extra="DESC number">
+          <div class="templates"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="proceedings">
-    <div class="text-2xl">Proceedings</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1"> 
-      {{ range $proceedings }} 
-      <li data-type="proceedings" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .proc_info | markdownify }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}.
-      </li>
-      {{ end }} 
-    </ul>
-  </div>
+  <div id="bibtex_errors"></div>
+  <div id="bibtex_display">
+    <div class="bibtex_template" callback="updateURL(bibtexentry)">
+      <span class="if BIBTEXTYPEKEY==BOOK">
+        <span class="author italic" conjunction=" and"></span> 
+        <span class="if notes">
+          <span class="italic">(<span class="notes"></span>)</span>
+        </span>
+        (<span class="year"></span>),
+        <span class="title font-bold"></span>,
+        <span class="series"></span>,
+        Vol. <span class="volume"></span>,
+        <span class="publisher"></span>,
+        <span class="address"></span>
+        [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+      </span>
+      
+      <span class="if BIBTEXTYPEKEY==PREPRINT">
+        <span class="author italic" conjunction=" and"></span>,
+        <span class="title font-bold"></span>,
+        <span class="submitted"></span>  
+        [<a href="#">Preprint<span class="url hidden"></span></a>]
+      </span>
+      
+      <span class="if BIBTEXTYPEKEY==ARTICLE">
+        <span class="author italic" conjunction=" and"></span>
+        (<span class="year"></span>),
+        <span class="title font-bold"></span><span class="if journal">,</span>
+        <span class="journal"></span><span class="if !volume">,</span>
+        <span class="if volume">
+          <span class="volume font-bold"></span><span class="if number">(<span class="number"></span>)</span>:<span class="pages"></span>
+        </span>
+        <span class="if notes">
+          <span class="notes"></span>
+        </span>
+        <span class="if url">
+          [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+        </span>
+      </span>
 
-  <div class="theses">
-    <div class="text-2xl">Theses</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1"> 
-      {{ range $theses }} 
-      <li data-type="thesis" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .thesis_info | markdownify }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}.
-      </li>
-      {{ end }} 
-    </ul>
+      <span class="if BIBTEXTYPEKEY==INPROCEEDINGS">
+        <span class="author italic" conjunction=" and"></span>
+        (<span class="year"></span>),
+        <span class="title font-bold"></span>,
+        <span class="if booktitle">
+          in "<span class="booktitle"></span>"
+        </span>
+        <span class="if notes">
+          <span class="notes"></span>
+        </span>
+        <span class="if editors">
+          (<span class="editors"></span>, Eds.)<span class="if series">,</span>
+        </span>
+        <span class="if !editors">
+          <span class="if editor">
+            (<span class="editor"></span>, Ed.)<span class="if series">,</span>
+          </span>
+        </span>
+        <span class="if event">
+          <span class="event"></span>,
+        </span>
+        <span class="if eventdate">
+          <span class="eventdate"></span><span class="if series">,</span>
+        </span>
+        <span class="if volume">
+          Vol. <span class="volume font-bold"></span> of
+        </span>
+        <span class="if series">
+          <span class="series"></span><span class="if publisher">,</span>
+        </span>
+        <span class="if publisher">
+          <span class="publisher"></span><span class="if pages">,</span>
+        </span>
+        <span class="if pages">
+          pp. <span class="pages"></span>
+        </span>
+        <span class="if url">
+          [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+        </span>
+      </span>
+      
+      <span class="if BIBTEXTYPEKEY==PHDTHESIS || BIBTEXTYPEKEY==MASTERSTHESIS">
+        <span class="author italic" conjunction=" and"></span> 
+        (<span class="year"></span>),
+        <span class="title font-bold"></span>.
+        <span class="if type"><span class="type"></span>,</span>
+        <span class="if !type">PhD Thesis,</span>
+        <span class="school"></span>
+        <span class="if !urlname">
+          [<a href="#">PDF<span class="url hidden"></span></a>]
+        </span>
+        <span class="if urlname">
+          [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+        </span>
+      </span>
+    </div>
+    
   </div>
+  
 
-  <div class="other">
-    <div class="text-2xl">Extended Abstracts and Other Publications</div>
-    <div class="text-sm warning">No entries match your search</div>
-    <ul class="red-border list-outside ml-1"> 
-      {{ range $other }} 
-      <li data-type="other" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .other_info | markdownify }}
-	{{ if .link_name }}
-	[<a href="{{ .link_url }}">{{ .link_name }}</a>]
-	{{ else }}
-	[<a href="{{ .link_url }}">Preprint</a>]
-	{{ end }}.
-      </li>
-      {{ end }} 
-    </ul>
-  </div>
+  
+  <!-- {{ $publications := $.Site.Data.publications }} -->
+  <!-- {{ $preprints := (index $publications "preprints").preprint }} -->
+  <!-- {{ $books := (index $publications "books").book }} -->
+  <!-- {{ $journals := (index $publications "journals").journal }} -->
+  <!-- {{ $proceedings := (index $publications "proceedings").proceedings }} -->
+  <!-- {{ $theses := (index $publications "theses").thesis }} -->
+  <!-- {{ $other := (index $publications "other").other }} -->
+  <!-- <div class="preprints"> -->
+  <!--   <div class="text-2xl">Preprints</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1"> -->
+  <!--     {{ range $preprints }} -->
+  <!--     <li data-type="preprint" data-authors="{{ .authors }}"><i>{{ .authors }}</i>, <b>{{ .title | markdownify }}</b>, submitted {{ .date }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }} -->
+  <!--       . -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
+
+  <!-- <div class="journals"> -->
+  <!--   <div class="text-2xl">Journals</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1">  -->
+  <!--     {{ range $journals }}  -->
+  <!--     <li data-type="journal" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .journal | markdownify }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }}. -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
+
+  <!-- <div class="books"> -->
+  <!--   <div class="text-2xl">Books</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1">  -->
+  <!--     {{ range $books }}  -->
+  <!--     <li data-type="book" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .pub_info | markdownify }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }}. -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
+
+  <!-- <div class="proceedings"> -->
+  <!--   <div class="text-2xl">Proceedings</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1">  -->
+  <!--     {{ range $proceedings }}  -->
+  <!--     <li data-type="proceedings" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .proc_info | markdownify }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }}. -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
+
+  <!-- <div class="theses"> -->
+  <!--   <div class="text-2xl">Theses</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1">  -->
+  <!--     {{ range $theses }}  -->
+  <!--     <li data-type="thesis" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .thesis_info | markdownify }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }}. -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
+
+  <!-- <div class="other"> -->
+  <!--   <div class="text-2xl">Extended Abstracts and Other Publications</div> -->
+  <!--   <div class="text-sm warning">No entries match your search</div> -->
+  <!--   <ul class="red-border list-outside ml-1">  -->
+  <!--     {{ range $other }}  -->
+  <!--     <li data-type="other" data-authors="{{ .authors }}"><i>{{ .authors }}</i> ({{ .date }}), <b>{{ .title | markdownify }}</b>, {{ .other_info | markdownify }} -->
+  <!--       {{ if .link_name }} -->
+  <!--       [<a href="{{ .link_url }}">{{ .link_name }}</a>] -->
+  <!--       {{ else }} -->
+  <!--       [<a href="{{ .link_url }}">Preprint</a>] -->
+  <!--       {{ end }}. -->
+  <!--     </li> -->
+  <!--     {{ end }}  -->
+  <!--   </ul> -->
+  <!-- </div> -->
 </div>
 
 <script>

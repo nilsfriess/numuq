@@ -152,7 +152,8 @@ main {
 /*******************************
 * Publications page setup
 *******************************/
-.publications {
+.publications .bibtexentry {
+    margin-bottom: 1em;
 }
 
 .publications li {
