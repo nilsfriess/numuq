@@ -1,6 +1,121 @@
+<div class="bibtex_template" callback="updateURL(bibtexentry)">
+  <span class="if BIBTEXTYPEKEY==BOOK">
+    <span class="author italic" conjunction=" and"></span> 
+    <span class="if notes">
+      <span class="italic">(<span class="notes"></span>)</span>
+    </span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="series"></span>,
+    Vol. <span class="volume"></span>,
+    <span class="publisher"></span>,
+    <span class="address"></span>
+    [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==PREPRINT">
+    <span class="author italic" conjunction=" and"></span><span class="if !year">,</span>
+    <span class="if year">
+      (<span class="year"></span>),
+    </span>
+    <span class="title font-bold"></span><span class="if submitted">,</span>
+    <span class="submitted"></span>
+    <span class="if url">
+      [<a href="#">Preprint<span class="url hidden"></span></a>]
+    </span>
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==ARTICLE">
+    <span class="author italic" conjunction=" and"></span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span><span class="if journal">,</span>
+    <span class="journal"></span><span class="if !volume">,</span>
+    <span class="if volume">
+      <span class="volume font-bold"></span><span class="if number">(<span class="number"></span>)</span>:<span class="pages"></span>
+    </span>
+    <span class="if notes">
+      <span class="notes"></span>
+    </span>
+    <span class="if url">
+      [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+
+  <span class="if BIBTEXTYPEKEY==INPROCEEDINGS">
+    <span class="author italic" conjunction=" and"></span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="if booktitle">
+      in "<span class="booktitle"></span>"
+    </span>
+    <span class="if notes">
+      <span class="notes"></span>
+    </span>
+    <span class="if editors">
+      (<span class="editors"></span>, Eds.)<span class="if series">,</span>
+    </span>
+    <span class="if !editors">
+      <span class="if editor">
+        (<span class="editor"></span>, Ed.)<span class="if series">,</span>
+      </span>
+    </span>
+    <span class="if event">
+      <span class="event"></span>,
+    </span>
+    <span class="if eventdate">
+      <span class="eventdate"></span><span class="if series">,</span>
+    </span>
+    <span class="if volume">
+      Vol. <span class="volume font-bold"></span> of
+    </span>
+    <span class="if series">
+      <span class="series"></span><span class="if publisher">,</span>
+    </span>
+    <span class="if publisher">
+      <span class="publisher"></span><span class="if pages">,</span>
+    </span>
+    <span class="if pages">
+      pp. <span class="pages"></span>
+    </span>
+    <span class="if url">
+      [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==PHDTHESIS || BIBTEXTYPEKEY==MASTERSTHESIS">
+    <span class="author italic" conjunction=" and"></span> 
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>.
+    <span class="if type"><span class="type"></span>,</span>
+    <span class="if !type">PhD Thesis,</span>
+    <span class="school"></span>
+    <span class="if url">
+      <span class="if !urlname">
+        [<a href="#">PDF<span class="url hidden"></span></a>]
+      </span>
+      <span class="if urlname">
+        [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+      </span>
+    </span>
+  </span>
+
+  <span class="if BIBTEXTYPEKEY==MISC">
+    <span class="author italic" conjunction=" and"></span> 
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="notes"></span>
+    <span class="if !urlname">
+      [<a href="#">PDF<span class="url hidden"></span></a>]
+    </span>
+    <span class="if urlname">
+      [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+</div>
+
 <footer id="footer">
   <div clas="left">
     <a href="{{ "privacy" | absURL }}">Impressum and Privacy</a>
   </div>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/src/bibtex_js.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/src/bibtex_js.js" defer></script>
 </footer>

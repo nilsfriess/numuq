@@ -1,61 +1,72 @@
 {{- define "main" -}}
-<div class="teaching">
-  <div class="header text-3xl">{{ .Title }}</div>
-  {{ range first 1 .Params.term }}
-  <div class="text-xl">Current Term ({{ .title }})</div>
-  <hr />
-  <ul class="list-disc list-inside">
-    {{ range .lecture }}
+<div class="teaching text-sm">
+  {{ $currentTerm := index .Params.term 0 }}
+  {{ $pastTerms := after 1 .Params.term }}
+  
+  <div class="header text-3xl">
+    {{ .Title }} ({{ $currentTerm.title }})
+  </div>
+  <ul class="current-term">
+    {{ range $currentTerm.lecture }}
     <li class="lecture-item">
-      <span class="lecture-title">
+      <div class="lecture-title">
 	<b>{{ .title | markdownify }}</b>
-      </span>
-      <span class="lecture-links">
+      </div>
+      <div class="lecture-links">
 	{{ if isset . "moodle" }}
 	<a href="{{ .moodle }}">Moodle</a>
-	{{ end }}
+	{{ end }} 
 	{{ if (and (isset . "moodle") (isset . "lsf")) }}
 	&nbsp;|&nbsp;
 	{{ end }}
 	{{ if isset . "lsf" }}
 	<a href="{{ .lsf }}">LSF</a> 
 	{{ end }}
-	{{ if (and (isset . "lsf") (isset . "notes")) }}
-	&nbsp;|&nbsp;
-	{{ end }}
-	{{ if isset . "notes" }}
-	<a href="{{ .notes }}">{{ .notes_name }}</a> 
-	{{ end }}
-	{{ if (and (isset . "notes") (isset . "page")) }}
+	{{ if and (isset . "page") (isset . "lsf") }}
 	&nbsp;|&nbsp;
 	{{ end }}
 	{{ if isset . "page" }}
-	<a href="{{ .page | lower }}">Additional Information</a>  
+        
+	<a href="{{ .page | lower }}">Course page</a>  
 	{{ end }}
-      </span>
+      </div>
     </li>
     {{ end }}
   </ul>
-  {{ end }}
-  <div class="text-xl">Past Terms</div>
-  <hr />
-  {{ range after 1 .Params.term }}
-  <div class="term">
-    <div class="text-l font-semibold">{{ .title }}</div>
-    <ul class="">
-      {{ range .lecture }} {{ if isset . "page" }}
-      <li class="lecture-item">
-        <a href="{{ .page | lower }}">
-          {{ .title | markdownify }}
-        </a>
-      </li>
-      {{ else }}
-      <li class="lecture-item">
-        {{ .title | markdownify }}
-      </li>
-      {{ end }} {{ end }}
-    </ul>
+  <button class="collapsible text-xl">Past Terms</button>
+  <div class="past-terms">
+    {{ range after 1 .Params.term }}
+    <div class="term">
+      <div class="font-semibold text-lg mb-1">{{ .title }}</div>
+      <ul class="">
+        {{ range .lecture }}
+        <li class="lecture-item">
+          <div class="lecture-title">
+	    <b>{{ .title | markdownify }}</b>
+          </div>
+          <div class="lecture-links">
+	    {{ if isset . "moodle" }}
+	    <a href="{{ .moodle }}">Moodle</a>
+	    {{ end }} 
+	    {{ if (and (isset . "moodle") (isset . "lsf")) }}
+	    &nbsp;|&nbsp;
+	    {{ end }}
+	    {{ if isset . "lsf" }}
+	    <a href="{{ .lsf }}">LSF</a> 
+	    {{ end }}
+	    {{ if and (isset . "page") (isset . "lsf") }}
+	    &nbsp;|&nbsp;
+	    {{ end }}
+	    {{ if isset . "page" }}
+	    <a href="{{ .page | lower }}">Course page</a>  
+	    {{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
   </div>
-  {{ end }}
 </div>
 {{ end }}
+

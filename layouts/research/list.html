@@ -1,19 +1,30 @@
 {{- define "main" -}}
-<div class="research">
+<div class="research text-sm">
+  <div class="bibtex_structure">
+    <div class="sort year" extra="DESC date">
+      <div class="templates"></div>
+    </div>
+  </div>
+
   <div class="header text-3xl">{{ .Title }}</div>
   <ul class="research mt-1 ml-1">
     {{ range .Site.Data.research.texts.research_area }}
     <li class="area red-border mb-10">
-      <emph class="font-semibold text-sm">{{ .name | markdownify }}</emph><br />
-      <div class="font-thin text-sm description">{{ .description | markdownify }}</div>
-      <p class="font-bold mt-4 text-sm">Sample publications</p>
-      <ul class="sample-publications list-disc list-inside text-sm">
-        {{ range .publications }}
-        <li class="my-1 text-sm"><span>{{ . | markdownify }}</span></li>
-        {{ end }}
-      </ul>
+      <emph class="font-semibold text-sm">
+        {{ .name | markdownify }}
+      </emph>
+      <br />
+      <div class="font-thin text-sm description">
+        {{ .description | markdownify }}
+      </div>
+      <p class="font-bold mt-4 text-sm">
+        Sample publications
+      </p>
+      <div class="bibtex_display text-sm" bibtexkey="{{ .publications }}" callback="finishedBibtexProcessing(bibtex_display)">
+      </div>
     </li>
     {{ end }}
   </ul>
-</div>
-{{ end }}
+  </div>
+  {{ end }}
+  

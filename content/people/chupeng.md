@@ -6,7 +6,7 @@ phone = "+49 1525 7213252"
 room = "1 / 3.?? (Mathematikon)"
 # avatar = "img/alec.jpeg"
 
-pub_name = "Ma, C."
+pub_name = "Chupeng"
 
 research_interest = "Homogenization, Multiscale Methods, Finite Element Method"
 +++

@@ -149,13 +149,13 @@ main {
     padding-left: 6px;
 }
 
+.research li a {
+    color: #c53030;
+}
+
 /*******************************
 * Publications page setup
 *******************************/
-.publications .bibtexentry {
-    margin-bottom: 1em;
-}
-
 .publications li {
     margin-bottom: 12px;
 }
@@ -198,40 +198,87 @@ a.active {
     font-weight: 700;
 }
 
-.teaching div.term, ul.red-border, li.red-border, p.red-border {
-    padding-left: 12px;
+/*******************************
+* Teaching page setup
+*******************************/
+
+.current-term li.lecture-item {
+    padding-left: 1em;
     border-left: 1px solid #c53030;
+}
+
+.past-terms .term {
+    padding-left: 1em;
+    border-left: 1px solid #c53030;
+    margin-bottom: 2em;
 }
 
 .lecture-item a:hover {
     color: #c53030;
 }
 
-.lecture-item a {
+.lecture-item a, .lecture a {
     color: black;
     text-decoration: underline;
 }
 
 .lecture ul {
+    margin-left: 18px;
     list-style-type: disc !important;
     list-style-position: outside !important;
 }
 
-.lecture li a {
+/* Collapsible past terms */
+.teaching .collapsible {
+    margin-top: 1em;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.teaching .active, .teaching .collapsible:hover {
+    background-color: #ccc;
     color: #c53030;
+    
 }
-.lecture li a:hover {
-    color: black;
+
+.teaching .collapsible:after {
+    content: "+"; /* Unicode character for "plus" sign (+) */
+    font-size: 14px;
+    color: #222;
+    float: right;
+    margin-left: 5px;
 }
+
+.teaching .active:after {
+    content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.past-terms {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.past-terms .term:first-child {
+    margin-top: 12px;
+}
+
 
 .secretary {
     margin-top: 24px;
     margin-bottom:24px;
-}
-
-.lecture-links {
-    margin-left: 22px;
-    display: block; 
 }
 
 
@@ -268,4 +315,8 @@ hr {
 .teaching li,
 .lecture li {
     margin-bottom: 12px;  
+}
+
+.bibtexentry {
+    margin-bottom: 1em;
 }

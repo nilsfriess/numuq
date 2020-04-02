@@ -1,8 +1,20 @@
+if (document.querySelector(".teaching .collapsible")) {
+    document.querySelector(".teaching .collapsible").onclick = (event) => {
+        event.target.classList.toggle("active");
+        var content = event.target.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = (content.scrollHeight + 100) + "px";
+        }
+    };
+}
+
 document.querySelector("#menu-button").onclick = () => {
     // toggle menu visibility on mobile
     document.querySelector("#nav-items").classList.toggle("hidden");
 };
-
+ 
 const updateURL = (entry) => {
     const link = entry.querySelector("a");
     if(link) {
@@ -11,6 +23,7 @@ const updateURL = (entry) => {
 };
 
 const finishedBibtexProcessing = () => {
+    console.log(window.href)
     setTimeout(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const authorQuery = urlParams.get("author");
@@ -22,11 +35,6 @@ const finishedBibtexProcessing = () => {
             authorInput.dispatchEvent(event);
         }  
     }, 100);
-}
-
-// If on research page, handle author filtering
-if (window.location.pathname.split("/")[1] === "publications") {
-    
 }
 
 const collapseAll = () => {
