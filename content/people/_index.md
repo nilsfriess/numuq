@@ -3,7 +3,7 @@ title = "Research Group Members in Heidelberg"
 affiliated_title = "Affiliated Members" 
 
 # head of group  
-prof = "Prof. Robert Scheichl"
+prof = "Prof. Dr. Robert Scheichl"
 description = "Professor for Numerical Analysis and Uncertainty Quantficiation"
 name = "rob"  
 
@@ -25,7 +25,7 @@ name = "rob"
 
 [[postdoc]]
   name = "Dr. Tobias Siems"
-  topic = ""
+  topic = "Changepoint Analysis, Recursive Bayesian Estimation, Probabilistic Graphical Models"
   page = "tobias"
 
 # Affiliated members

@@ -1,5 +1,5 @@
 {{- define "main" -}}
-<div class="person flex flex-col md:flex-row">
+<div class="person flex flex-col md:flex-row text-sm">
   <div class="avatar">
     {{ if .Params.avatar }}
     <img src="{{ .Params.avatar | absURL }}" />
