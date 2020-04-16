@@ -23,7 +23,10 @@ const updateURL = (entry) => {
 };
 
 const finishedBibtexProcessing = () => {
-    document.querySelector(".overlay").style.display = "none";
+    const overlay = document.querySelector(".overlay");
+    if (overlay)
+        overlay.style.display = "none";
+    
     setTimeout(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const authorQuery = urlParams.get("author");
