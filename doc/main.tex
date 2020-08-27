@@ -1,0 +1,345 @@
+\documentclass[a4paper,parskip=half]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[light]{kpfonts}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[top=2cm,left=2.5cm,bottom=3cm,right=2.5cm]{geometry}
+
+\addtokomafont{disposition}{\rmfamily}
+
+\title{\LARGE Guide to Working with the Research Group's Website}
+\date{\normalsize Last updated: \today}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}%
+\maketitle
+\tableofcontents
+\newpage
+\section{Getting started}
+The web page is built with \texttt{hugo}, a static site generator that can be
+downloaded at \url{https://gohugo.io}. This makes editing the web page very easy
+since \texttt{hugo} generates all the html, css and javascript files from simple
+markdown files; no html to has to be edited by hand.
+
+Install \texttt{hugo} and \texttt{git} and setup an account with ssh access on
+the katana server (contact Joachim Simon). If everything is set up, clone the
+repository that contains all the files to your computer by
+\begin{center}
+  \texttt{git clone \url{URL} numuq}.
+\end{center}
+This will create a folder \texttt{numuq} that contains all the necessary
+files. Navigate into the folder (\texttt{cd numuq}) and run \texttt{hugo} with
+the command \texttt{hugo server}. This will start a local web server and open a
+local version of the web page in your web browser. If not, open your web browser
+and navigate to the url
+\begin{center}
+  \url{http://localhost:1313}.
+\end{center}
+You can now start editing the files; the web page will reload
+automatically. When you are finished editing the website stop the \texttt{hugo
+  server} command and simply run \texttt{hugo} (without arguments). This will
+generate all the files that can then be published to the server. The publishing
+process is described in detail below. Note that this documentation is also part
+of the repository and if you find errors or want to extend it, please feel free
+to do so.
+
+\newpage
+\section{Recurring tasks}
+\texttt{hugo} makes editing and creating pages very easy. It is not necessary to
+write html, css or javascript; \texttt{hugo} uses \texttt{markdown} files that
+are easier to work with than html files.  This also makes sure that everything
+is displayed correctly while you don't have to take care of the layout
+yourself. Below is a list of recurring tasks such as adding/ editing lectures or
+editing your personal page.
+
+\subsection{Before every task}
+Before you change anything, you have to update your local version to match the
+one on the server (since someone else could have changed something so that your
+local version and the version on the server do not match anymore).
+
+Just navigate to the folder that contains the repository on your computer and
+run
+\begin{center}
+  \texttt{git pull}.
+\end{center}
+If you do not do this, errors might occur when you try to publish your changes
+and the changes are conflicting with the files on the server. You can then start
+the development server by running the command \texttt{hugo server}.
+
+\subsection{Publishing your changes/ Uploading the files to the server}
+When you are done adding new pages/ changing page content etc., you have to
+\emph{commit} and \emph{push} the files to the git repository on the server.
+This is done as follows: Stop the development server that you started earlier.
+Then, you can create the actual html/css/javascript files that will be uploaded
+to the server by simply running the command \texttt{hugo}. If no errors
+occurred, you can type \texttt{git status} to see the files \texttt{git} thinks
+have changed.  These should be the actual markdown files you created or changed
+but also the corresponding html files in the folder \texttt{public/}
+(\textbf{This step is very important since otherwise the markdown files and
+  corresponding html files do not match and your changes will not get
+  published}).
+
+If everything looks okay, type \texttt{git add -u}. This tells \texttt{git} that
+you want to track the changes you made to files that already existed in the
+repository before you started. If you also created new pages, you have to add
+them manually by typing for each new page (again: don't forget the newly created
+pages in the \texttt{public} folder)
+\begin{center}
+  \texttt{git add path/to/new/page}
+\end{center}
+You can again run \texttt{git status} to see if you have added all the files you
+added/modified.
+
+Now you can commit the changes to the repository by typing
+\begin{center}
+  \texttt{git commit -m "Add new page for course xyz"}
+\end{center}
+The message after the parameter \texttt{-m} is the so called \emph{commit
+  message} and should describe your changes. Now you can upload the files to the
+server by running
+\begin{center}
+  \texttt{git push}
+\end{center}
+If everything is setup correctly, your files are now uploaded to the server and
+will automatically get published to the web. Note that it might take a few
+minutes until you see the changes; you might also want to reload the page using
+\texttt{Ctrl + Shift + R} (Linux/Windows) or \texttt{Cmd + Shift + R} (Mac) to
+force your web browser to fetch the updated version.
+
+\subsection{Adding a new semester}
+Adding a new entry on the teaching page is done by editing the file
+\begin{center}
+  \texttt{content/teaching/\_index.md}\,.
+\end{center}
+The file is broken up into different semesters, which are called \emph{terms} in
+this context. The first term in the file automatically gets interpreted as the
+current semester (see the Teaching page on the website to see the difference
+between the way the semesters are displayed). The remaining terms are rendered
+as ``past terms''. This makes adding new terms very easy. Simply add the new
+term above the term that is currently at the top. The syntax that defines a new
+term is
+\begin{verbatim}
+  [[term]]
+    title = "WiSe 2019/20"
+\end{verbatim}
+
+\subsection{Adding a new lecture/ seminar/ course}
+Under each term in the file \texttt{content/teaching/\_index.md}, you can define
+as many lectures as you want. Note, that no matter if it is a lecture, a seminar
+or something else you want to add, in \texttt{hugo} it is always referred to as
+a lecture. Every lecture has the following properties
+\begin{itemize}
+\item A title/name called \texttt{title}
+\item A link to its LSF page called \texttt{lsf}
+\item A link to its moodle page called \texttt{moodle}
+\item A link to a separate course page called \texttt{page} (setting up a course
+  page is described below)
+\end{itemize}
+Using these properties one can define a lecture using
+\begin{verbatim}
+  [[term.lecture]]
+    title = "Example Lecture"
+    lsf = "https:://lsf.uni-heidelberg.de/xyz"
+    moodle = "https://moodle.uni-heidelberg.de/xyz"
+    page = "examplelecture"
+\end{verbatim}
+None of the properties (except for the title) is mandatory. If the \texttt{page}
+property is set, the lecture is automatically turned into a link that links to a
+separate course page. Of course, this page has to be created which is done by
+creating a markdown file in the folder \texttt{content/teaching}. The name of
+the file has to equal the value of the page parameter. For example, in the
+example above we would need to create a file named \texttt{examplelecture.md}.
+
+At the top of this file, enclosed in three plus symbols ``+++'' the title of the
+lecture has to be given. This can differ from the title given above so that on
+the teaching page a short name can be given (e.g. ``Numerik 0'' on the teaching
+page and ``Einführung in die Numerik'' on the detail page). Below the plus
+symbols arbitrary content can be added in markdown format. It is easiest to copy
+an existing file and edit it according to your needs.
+
+\subsection{Adding a page for a group member}
+Adding a new group member is done in two steps. First, we add the a new entry to
+the file \texttt{content/people/\_index.md}. There are two types of entries, one
+for PhD students and one for postdocs. Both have the following three properties:
+\begin{itemize}
+\item The name of the member called \texttt{name}.
+\item A short description of the research area called \texttt{topic}.
+\item The name of the personal page called \texttt{page} (explained below).
+\end{itemize}
+The second step is to create and setup the personal page. To this end, we first
+create a markdown file with the name set to the value of \texttt{page} from
+above. This file contains additional information about the respective member
+such as contact details and (optionally) a picture. It is easiest to simply copy
+an existing page and edit it accordingly. Most of the parameters are
+self-explanatory expect for \texttt{pub\_name} and \texttt{research\_interest}.
+
+\paragraph{\texttt{pub\_name}}
+Every group member's page contains a link to the publications page. The
+publications page allows the user to filter the entries (e.g. by author) and the
+value of \texttt{pub\_name} sets this value for the respective group member when
+the user clicks on the ``see publications'' link of a member. Thus, this value
+should in most cases be set to the last name.
+
+\paragraph{\texttt{research\_interest}}
+This parameter contains a more detailed description of the research interest. To
+add multi-line content, you can use the following syntax
+\begin{verbatim}
+  research_interest = """
+  I am interested in 
+
+  * Numerical analysis
+
+  * Uncertainty Quantification
+  """
+\end{verbatim}
+This would result in a list, similar to the following:
+
+\noindent I am interested in
+\begin{itemize}
+\item Numerical Analysis
+\item Uncertainty Quantification
+\end{itemize}
+
+\subsection{Using \LaTeX}
+Generally, everywhere where you can put text, you can also put Latex code.  Of
+course, only a subset of the Latex functionality is supported but simple
+equations or symbols can be used. Note, however, that due to the fact that
+\texttt{hugo} does not (yet) support the library that is responsible for
+converting the Latex code to HTML, you have to escape every backslash
+``\textbackslash'', i.e. you have to duplicate every backslash. Apart from that,
+you can use it as usual. To use display the maths in inline mode you have to
+enclose the Latex code by a dollar sign ``\$'', to render an equation in display
+mode you have to use two dollar sings ``\$\$''. For instance, to achieve
+something like
+\begin{equation*}
+  \hat{\mathbb{E}}(f) = \frac{1}{N} \sum_{i=1}^N f(X_i)
+\end{equation*}
+you would type
+\begin{verbatim}
+  $$
+    \\hat{\\mathbb{E}}(f) = \\frac{1}{N} \\sum_{i=1}^N f(X_i)
+  $$
+\end{verbatim}
+
+
+% \newpage
+% \section{General documentation of the web page}
+% \subsection{Folder structure}
+% After cloning the repository you will found (among others) the following
+% folders:
+% \begin{itemize}
+% \item content,
+% \item data,
+% \item layouts,
+% \item static.
+% \end{itemize}
+% The first folder contains -- as the name suggests -- the actual contents. It
+% contains a sub folder for every menu entry and in these sub folders the actual
+% markdown files.
+
+% The data folder contains data that can be used across different sites.
+% Currently, only the descriptions of the research areas that are shown on the
+% home page and the research page are stored in files in this directory.
+
+% The layouts folder contains the actual html templates that are used as a basis
+% for the various content pages. Changes made here affect all the pages that use
+% the according template (e.g. changes made to the file
+% \texttt{layouts/teaching/single.html} affect every course page located in the
+% \texttt{content/teaching} folder). If you only want to change some contents of
+% the page (e.g. add a new course page for a lecture), you don't have to change
+% anything in these files.
+
+% The static folder contains the css and javascript files but also contains all
+% the images, pdf files, and BibTeX files containing the publications.
+
+
+% \subsection{The \texttt{content} folder}
+% \subsubsection*{The \texttt{content/news/\_index.md} file}
+% This file contains a list of events.
+
+% \subsubsection*{The \texttt{content/people} folder}
+% The \texttt{\_index.md} file contains a list of group members. List entries have
+% the following format
+% \begin{verbatim}
+% [[role]]
+%   name = "John Doe"
+%   topic = "Very important research topic"
+%   page = "john"
+% \end{verbatim}
+% The parameter \texttt{role} can be one of the following
+% \begin{itemize}
+% \item \texttt{phd}: For PhD students
+% \item \texttt{postdoc}: For postdoctoral researchers
+% \item \texttt{member}: For affiliated members
+% \end{itemize}
+% The \texttt{name} and \texttt{topic} parameter are self-explanatory.  The page
+% parameter is only available for \texttt{phd} and \texttt{postdoc} entries. This
+% parameter is \textbf{not} required. If present, there must exist a file in the
+% people directory called \texttt{john.md} (for the example above). When the
+% parameter is set, the name of the group member is made into a link that points
+% to a personal page of that member. The contents of this page are described by
+% the \texttt{john.md} file. This file provides the following parameters (the
+% parameters in italic are required; the other ones can be omitted):
+% \begin{itemize}
+% \item \emph{title}: The title shown at the top of the web browser
+% \item \emph{name}: The name of the group member. This parameter can be formatted
+%   using markdown syntax; to make the last name bold set this to "John **Doe**"
+% \item \emph{email}
+% \item phone
+% \item room
+% \item avatar: A string that points to a picture; the path should be relative to
+%   the \texttt{static} folder; for example: "img/john.jpeg"
+% \item google\_scholar: If present, a link to the Google Scholar profile is added
+% \item \emph{pub\_name}: This name is used when clicking on the link to the
+%   publications page. This page lists the publications of the whole research
+%   group. However, it provides a filter that lets users filter by author. This
+%   value gets automatically put into the filter input. Should either be just the
+%   last name or last name and the first letter of the first name, seperated by
+%   comma, e.g.: either "Doe" or "Doe, J".
+
+% \item \emph{research\_interest}: Research interest of the group member. Markdown
+%   syntax can be used to make lists; \LaTeX{} can be used to typeset maths.
+% \end{itemize}
+
+
+% When your are finished editing all the files and want to publish the page you
+% also have to \emph{commit} the changes to the GitHub repository.  This is done
+% by the following steps:
+% \begin{itemize}
+% \item If you have created any new files (e.g. new pictures, new PDF files, new
+%   course overview pages etc.) you have tell \texttt{git} that this files are
+%   also part of the repository. Example: If you have created a new course page
+%   named \texttt{Num2.md} inside the folder \texttt{content/teaching} you have
+%   to run the command
+%   \begin{center}
+%     \texttt{git add content/teaching/Num2.md}.
+%   \end{center}
+%   (Note: this step is only necessary if you have created \emph{new} files).
+% \item After you have added all the new files you can commit your changes. This
+%   can be done by the command
+%   \begin{center}
+%     \texttt{git commit -m "Added new teaching page for Num2 course"}.
+%   \end{center}
+%   The string after the \texttt{-m} flag is called the \emph{commit message}
+%   and should describe your changes.
+% \item Finally you can upload the changes to the GitHub repository (by now, all
+%   the changes are only local on your machine). This can be done with the
+%   command
+%   \begin{center}
+%     \texttt{git push} \quad or \quad \texttt{git push -u origin master}.
+%   \end{center}
+%   Use the second command if the first one fails. Depending on your setup,
+%   \texttt{git} might prompt for your credentials. Type in the email and
+%   password you used to create the account on \url{github.com}.
+% \end{itemize}
+% Now you can upload the files from the public folder to the webserver.
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
