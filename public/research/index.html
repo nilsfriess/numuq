@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="generator" content="Hugo 0.68.3" /> 
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://katana.iwr.uni-heidelberg.de/css/main.css" />
+   
+  
+  <title>Research | Numerical Analysis and UQ</title>
+  
+   
+  <script src="https://katana.iwr.uni-heidelberg.de/js/main.js" defer></script>
+  <script src="https://katana.iwr.uni-heidelberg.de/js/load-mathjax.js" async></script>
+
+  <bibtex src="/publications/books.bib"></bibtex>
+  <bibtex src="/publications/preprints.bib"></bibtex>
+  <bibtex src="/publications/journals.bib"></bibtex>
+  <bibtex src="/publications/proceedings.bib"></bibtex>
+  <bibtex src="/publications/other.bib"></bibtex>
+  <bibtex src="/publications/theses.bib"></bibtex>
+</head>
+
+
+</script>
+  <body>
+    <nav id="nav" class="flex items-center justify-between flex-wrap p-6">
+  <div class="nav-title flex items-center mr-6">
+    <a href="/" class="font-semibold text-xl tracking-tight"
+      >Numerical Analysis and UQ</a
+    >
+  </div>
+  <div class="block lg:hidden">
+    <button
+      id="menu-button"
+      class="flex items-center px-3 py-2 border rounded text-red-700 border-red-700 hover:text-black hover:border-black"
+    >
+      <svg
+        class="fill-current h-3 w-3"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      </svg>
+    </button>
+  </div> 
+   
+  <div id="nav-items" class="w-full block flex-grow lg:flex lg:w-auto hidden">
+    <div class="text-sm lg:flex-grow">
+      
+      <span></span>
+      
+      
+      <a 
+        href="/people/"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	      
+"
+      >
+        People
+      </a>
+      
+      <span></span>
+      
+      
+      <a 
+        href="/news/"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	      
+"
+      >
+        News &amp; Events
+      </a>
+      
+      <span></span>
+      
+      
+      <a 
+        href="/publications/"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	      
+"
+      >
+        Publications
+      </a>
+      
+      <span></span>
+      
+      
+      <a 
+        href="/research/"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	       active 
+"
+      >
+        Research
+      </a>
+      
+      <span></span>
+      
+      
+      <a 
+        href="/teaching/"
+        class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-700 mr-4
+	      
+"
+      >
+        Teaching
+      </a>
+      
+    </div>
+  </div>
+</nav>
+
+    <div id="container">
+      <div id="content-wrap">
+        <main id="main" class="p-8">
+          <div class="research text-sm">
+  <div class="bibtex_structure">
+    <div class="sort year" extra="DESC date">
+      <div class="templates"></div>
+    </div>
+  </div>
+
+  <div class="header text-3xl">Research</div>
+  <ul class="research mt-1 ml-1">
+    
+    <li class="area red-border mb-10">
+      <emph class="font-semibold text-sm">
+        Uncertainty Quantification
+      </emph>
+      <br />
+      <div class="font-thin text-sm description">
+        <p>Many physical models from the natural sciences and from engineering involve sources of uncertainty that affect their outputs. An example are variations in the orientation of layers of carbon fibres occurring naturally in the manufacturing process of aircraft wings. As a consequence, the locations and types of possible defects and cracks are difficult to predict precisely. The goal of uncertainty quantification is to use mathematical and computational methods to account for such uncertainties, and to understand how they propagate through to model outputs.</p>
+
+<p>The research of our group focuses on developing innovative numerical methods to efficiently quantify uncertainty. We apply these techniques to tackle data-driven, large-scale problems that are typically modelled in the form of differential equations. Our methods strive for a balance between efficiency, a rigorous mathematical foundation and realistic model problems. As a brief overview, some of the techniques we develop are based on Monte Carlo/quasi-Monte Carlo sampling, stochastic collocation, sophisticated hierarchical/multilevel strategies and dimension reduction through low-rank tensor approximations. The applications we study range from groundwater flow, to nuclear physics and carbon fibre composites in manufacturing.</p>
+
+      </div>
+      <p class="font-bold mt-4 text-sm">
+        Sample publications
+      </p>
+      <div class="bibtex_display text-sm" bibtexkey="lang2019adaptive|dodwell2019multilevel|gilb2019qmc|detommaso2018continuous" callback="finishedBibtexProcessing(bibtex_display)">
+      </div>
+    </li>
+    
+    <li class="area red-border mb-10">
+      <emph class="font-semibold text-sm">
+        Inverse Problems and Bayesian Inference
+      </emph>
+      <br />
+      <div class="font-thin text-sm description">
+        <p>When studying real world processes mathematically, essentially all problems can be roughly put into two classes: Forward and inverse problems. A forward problem concerns the calculation of the state of a physical system, given all the necessary parameters, as well as boundary and initial conditions. Inverse problems, on the other hand, are concerned with computing parameters given observations of the state of the system. Good estimates of these parameters give us an insight into hidden quantities that typically cannot be observed directly and are otherwise very difficult to grasp. Consequently, inverse problems are among the most important in mathematical applications and uncertainty quantification plays a crucial role here.</p>
+
+<p>A very popular approach to address inverse problems is Bayesian inference, a subbranch of statistics and data science. It facilitates the quantification of uncertainties regarding the model and its parameters. This resolves the inherent ill-posedness of inverse problems and has proven to be exceedingly fruitful in many applications. A particular focus in our group is the design and analysis of efficient numerical techniques for high- and infinite-dimensional Bayesian inverse problems, especially those constrained by differential equations. We look at the effect of choosing high-level priors, develop efficient multilevel algorithms and surrogates, incorporate novel ideas from numerical analysis into this setting and explore links to machine learning.</p>
+
+      </div>
+      <p class="font-bold mt-4 text-sm">
+        Sample publications
+      </p>
+      <div class="bibtex_display text-sm" bibtexkey="detommaso2020hint|dolgov2018approximation|dodwell2019mlmcmc|detommaso2018stein" callback="finishedBibtexProcessing(bibtex_display)">
+      </div>
+    </li>
+    
+    <li class="area red-border mb-10">
+      <emph class="font-semibold text-sm">
+        Multiscale methods
+      </emph>
+      <br />
+      <div class="font-thin text-sm description">
+        <p>Natural or engineered materials often contain two or more key constituents, arranged in a heterogeneous structure varying at different scales. Such materials are desirable because their macroscopic properties can be superior to the properties of the individual constituents. It is even possible to explicitly design them for a particular purpose by changing the composition of the constituents. An example are carbon fibre composites for lightweight structures and vehicles. The mathematical modelling of such heterogeneous or composite materials naturally leads to partial differential equations (PDEs) with highly oscillating coefficients. Direct numerical solution of such problems with traditional methods, such as finite elements is computationally expensive. Just to compute the correct qualitative behaviour, the mesh resolution would need to be sufficiently high to capture all the fine scale variation.</p>
+
+<p>In our group, we study and develop multiscale numerical methods that do not suffer from this drawback. We are particularly interested in systems without periodic structure or scale separation and in problems with a high contrast in the constituent material properties. Such problems require customized approximation spaces, computable via localised boundary value or eigen-problems. There are also strong links to model order reduction and domain decomposition methods. Examples include multiscale finite elements, generalised multiscale finite elements, or the localizable orthogonal decomposition method. Target applications are again subsurface flow and carbon fibre composites, but also biological materials such as bone or cells.</p>
+
+      </div>
+      <p class="font-bold mt-4 text-sm">
+        Sample publications
+      </p>
+      <div class="bibtex_display text-sm" bibtexkey="butler2020dune|dodwell2017customcoarse|peterseim2016robust|spillane2014coarse" callback="finishedBibtexProcessing(bibtex_display)">
+      </div>
+    </li>
+    
+    <li class="area red-border mb-10">
+      <emph class="font-semibold text-sm">
+        Numerical Analysis &amp; Scientific Computing
+      </emph>
+      <br />
+      <div class="font-thin text-sm description">
+        <p>Scientific computing and numerical simulation are playing an ever more important role in science and technology. Hardly any new developments, e.g., in engineering or the geosciences, take place without careful mathematical modelling, analysis and optimisation. More and more complicated systems are being tackled, in particular in the life sciences or in the context of climate change. This requires continued research into efficient and robust numerical methods, especially in the context of heterogeneous or random media, and in their careful and rigorous numerical analysis. Increased efficiency requires a redesign of traditional algorithms to harness the power of modern many-core computing architectures (hardware-aware scientific computing), while data-driven (predictive) scientific computing poses new challenges for the robustness of existing methods.</p>
+
+<p>Here, the focus of our group encompasses</p>
+
+<ol>
+<li>traditional topics, such as efficient preconditioning and discretisation methods for heterogeneous and anisotropic PDEs, or efficient algorithms for large-scale eigenproblems, as well as<br /></li>
+<li>more modern topics that arise naturally in the context of uncertainty quantification or Bayesian inference, such as high-dimensional approximation and quadrature, including Monte Carlo, quasi-Monte Carlo, sparse grid, low-rank tensor approximation or deep learning.<br /></li>
+</ol>
+
+<p>In terms of novel software, we contribute in particular to DUNE (the Distributed and Unified Numerical Environment) and to MUQ (the MIT Uncertainty Quantification Library).</p>
+
+      </div>
+      <p class="font-bold mt-4 text-sm">
+        Sample publications
+      </p>
+      <div class="bibtex_display text-sm" bibtexkey="rohrbach2020rankbound|bachmayr2019unified|gmeiner2016scheduling|muller2014parallel" callback="finishedBibtexProcessing(bibtex_display)">
+      </div>
+    </li>
+    
+  </ul>
+  </div>
+  
+        </main>
+      </div>
+      <div class="bibtex_template" callback="updateURL(bibtexentry)">
+  <span class="if BIBTEXTYPEKEY==BOOK">
+    <span class="author italic" conjunction=" and"></span> 
+    <span class="if notes">
+      <span class="italic">(<span class="notes"></span>)</span>
+    </span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="series"></span>,
+    Vol. <span class="volume"></span>,
+    <span class="publisher"></span>,
+    <span class="address"></span>
+    [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==PREPRINT">
+    <span class="author italic" conjunction=" and"></span><span class="if !year">,</span>
+    <span class="if year">
+      (<span class="year"></span>),
+    </span>
+    <span class="title font-bold"></span><span class="if submitted">,</span>
+    <span class="submitted"></span>
+    <span class="if url">
+      [<a href="#">Preprint<span class="url hidden"></span></a>]
+    </span>
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==ARTICLE">
+    <span class="author italic" conjunction=" and"></span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span><span class="if journal">,</span>
+    <span class="journal"></span><span class="if !volume">,</span>
+    <span class="if volume">
+      <span class="volume font-bold"></span><span class="if number">(<span class="number"></span>)</span><span class="if pages">:<span class="pages"></span></span>
+    </span>
+    <span class="if !volume">
+      pp. <span class="pages"></span>
+    </span>
+    <span class="if notes">
+      <span class="notes"></span>
+    </span>
+    <span class="if url">
+      [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+
+  <span class="if BIBTEXTYPEKEY==INPROCEEDINGS">
+    <span class="author italic" conjunction=" and"></span>
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="if booktitle">
+      in "<span class="booktitle"></span>"
+    </span>
+    <span class="if notes">
+      <span class="notes"></span>
+    </span>
+    <span class="if editors">
+      (<span class="editors"></span>, Eds.)<span class="if series">,</span>
+    </span>
+    <span class="if !editors">
+      <span class="if editor">
+        (<span class="editor"></span>, Ed.)<span class="if series">,</span>
+      </span>
+    </span>
+    <span class="if event">
+      <span class="event"></span>,
+    </span>
+    <span class="if eventdate">
+      <span class="eventdate"></span><span class="if series">,</span>
+    </span>
+    <span class="if volume">
+      Vol. <span class="volume font-bold"></span> of
+    </span>
+    <span class="if series">
+      <span class="series"></span><span class="if publisher">,</span>
+    </span>
+    <span class="if publisher">
+      <span class="publisher"></span><span class="if pages">,</span>
+    </span>
+    <span class="if pages">
+      pp. <span class="pages"></span>
+    </span>
+    <span class="if url">
+      [<a href="#"><span class="if urlname"><span class="urlname"></span></span><span class="if !urlname">Preprint</span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+  
+  <span class="if BIBTEXTYPEKEY==PHDTHESIS || BIBTEXTYPEKEY==MASTERSTHESIS">
+    <span class="author italic" conjunction=" and"></span> 
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>.
+    <span class="if type"><span class="type"></span>,</span>
+    <span class="if !type">PhD Thesis,</span>
+    <span class="school"></span>
+    <span class="if url">
+      <span class="if !urlname">
+        [<a href="#">PDF<span class="url hidden"></span></a>]
+      </span>
+      <span class="if urlname">
+        [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+      </span>
+    </span>
+  </span>
+
+  <span class="if BIBTEXTYPEKEY==MISC">
+    <span class="author italic" conjunction=" and"></span> 
+    (<span class="year"></span>),
+    <span class="title font-bold"></span>,
+    <span class="notes"></span>
+    <span class="if !urlname">
+      [<a href="#">PDF<span class="url hidden"></span></a>]
+    </span>
+    <span class="if urlname">
+      [<a href="#"><span class="urlname"></span><span class="url hidden"></span></a>]
+    </span>
+  </span>
+</div>
+
+<footer id="footer">
+  <div clas="left">
+    <a href="https://www.uni-heidelberg.de/en/imprint">Legal Notice</a>&nbsp;|&nbsp;
+    <a href="https://www.uni-heidelberg.de/en/data-protection-declaration">Privacy Policy</a>
+  </div>
+  <div class="right">
+    <a href="https://www.uni-heidelberg.de/en/disclaimer">Disclaimer</a>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/src/bibtex_js.js" defer></script>
+</footer>
+
+    </div>
+  </body>
+</html>

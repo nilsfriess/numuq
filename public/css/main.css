@@ -1,0 +1,369 @@
+html, body {
+    font-family: Montserrat,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*******************************
+* Navbar setup
+*******************************/
+nav#nav  {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-height: 5rem;
+    width: 100vw;
+    max-width: 100%;
+}
+
+nav .nav-title {
+    max-width: calc(100vw - 120px);
+}
+
+/*******************************
+* Main setup
+*******************************/
+main {
+    max-width: 970px;
+}
+
+/*******************************
+* Footer setup
+*******************************/
+#container {
+    position: relative;
+}
+
+#content-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+    min-height: calc(100vh - 5rem);
+}
+
+#footer {
+    position:absolute;
+    bottom: 0;
+    height: 4rem;
+    box-shadow: 0px -0.2px 6px 0px rgba(0,0,0,0.75);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 1.3rem;
+    margin: 0;
+    width: 100vw;
+    max-width: 100%; 
+}
+
+@media only screen and (max-width: 480px) {
+    #footer {
+	flex-direction: column;
+	justify-content: center;
+	height: 5rem;
+    }
+
+    #footer div:first-child {
+	margin-bottom: 8px;
+    }
+}
+
+/*******************************
+* Home page setup
+*******************************/
+.home .address {
+    margin-top: 32px;
+}
+
+.home .research-entries div.crop {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 5;
+}
+
+.home .research-entries div.crop p, .home .research-entries div.crop ol {
+    display: none;
+}
+
+.home .research-entries div.crop p:first-child {
+    display: initial;
+}
+ 
+.home .research-entries li a {
+    cursor: pointer; 
+    color: #c53030;
+}
+
+.home .description p {
+    margin-bottom: 1em; 
+}
+
+.home div.description ol {
+    list-style-type: lower-alpha;
+    margin-left: 2em;
+    margin-top: -1em;
+}
+
+.home div.description ol li {
+    padding-left: 6px;
+}
+
+
+/*******************************
+* Person page setup
+*******************************/    
+.person .description {
+    margin-top: 2rem;
+    flex-grow: 2;
+}
+
+.person .name, .person .mail, .person .phone, .person .room {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.person .name {
+    margin-bottom: 16px;
+}
+
+/*******************************
+* Research page setup
+*******************************/
+.research ul.sample-publications {
+    text-indent: calc(11px - 2em);
+    margin-left: 2em;
+}
+
+.research div.description p {
+    margin-top: 1em;
+}
+
+.research div.description ol {
+    list-style-type: lower-alpha;
+    margin-left: 2em;
+    margin-bottom: -1em;
+}
+
+.research div.description ol li {
+    padding-left: 6px;
+}
+
+.research li a {
+    color: #c53030;
+}
+
+/*******************************
+* Publications page setup
+*******************************/
+.publications li {
+    margin-bottom: 12px;
+}
+
+.publications .text-2xl {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.publications .header-input .header {
+    margin-right: 48px;
+}
+
+.publications .header-input {
+    display: flex;
+} 
+
+.publications a {
+    color: #c53030;
+}
+
+
+.members .header, .visitors .header, .teaching .header {
+    margin-bottom: 16px;
+}
+
+.lecture .header {
+    margin-bottom: 8px;
+}
+
+.student a, .person a {
+    color: #c53030;
+}
+
+.student a:hover, .person a:hover {
+    color: black;
+}
+
+a.active {
+    font-weight: 700;
+}
+
+/*******************************
+* Teaching page setup
+*******************************/
+
+.current-term li.lecture-item {
+    padding-left: 1em;
+    border-left: 1px solid #c53030;
+}
+
+.past-terms .term {
+    padding-left: 1em;
+    border-left: 1px solid #c53030;
+    margin-bottom: 2em;
+}
+
+.lecture-item a:hover {
+    color: #c53030;
+}
+
+.lecture-item a, .lecture a {
+    color: black;
+    text-decoration: underline;
+}
+
+.lecture ul, .person .description ul  {
+    margin-left: 18px;
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+}
+
+/* Collapsible past terms */
+.teaching .collapsible {
+    margin-top: 1em;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.teaching .active, .teaching .collapsible:hover {
+    background-color: #ccc;
+    color: #c53030;
+    
+}
+
+.teaching .collapsible:after {
+    content: "+"; /* Unicode character for "plus" sign (+) */
+    font-size: 14px;
+    color: #222;
+    float: right;
+    margin-left: 5px;
+}
+
+.teaching .active:after {
+    content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+.past-terms {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.past-terms .term:first-child {
+    margin-top: 12px;
+}
+
+
+.secretary {
+    margin-top: 24px;
+    margin-bottom:24px;
+}
+
+
+/*******************************
+* MISC
+*******************************/
+.avatar {
+    min-width: 320px;
+    margin-top: 32px;
+    flex-grow: 1; 
+}
+
+.avatar img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 16px auto;
+}
+
+hr {
+    width: 60%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+}
+
+.members li,
+.pastmembers li,
+.events li,
+.visitors li,
+.teaching li,
+.lecture li {
+    margin-bottom: 12px;  
+}
+
+.bibtexentry {
+    margin-bottom: 1em;
+}
+
+/*******************************
+* LOADER
+*******************************/
+
+.overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #222;
+    opacity: 0.5;
+}
+
+.overlay__inner {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.overlay__content {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.05);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+    border-radius: 100%;
+    border-style: solid;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

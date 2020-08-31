@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home</title>
+    <link>https://katana.iwr.uni-heidelberg.de/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://katana.iwr.uni-heidelberg.de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/alec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/alec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/arne/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/arne/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/chupeng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/chupeng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/tobias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/tobias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/multiscalemethods1920/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/multiscalemethods1920/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>(Pro)Seminar Numerical Methods for ODEs: Geometric Numerical Integration</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/seminarode1920/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/seminarode1920/</guid>
+      <description> Information and References  </description>
+    </item>
+    
+    <item>
+      <title>(Pro)Seminar Symmetric Eigenvalue Problems</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/seminareigval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/seminareigval/</guid>
+      <description> Ankündigung, Literaturliste, Administratives Assessment Criteria / Mark Sheet  </description>
+    </item>
+    
+    <item>
+      <title>Compact Graduate Course: Computational Methods for UQ</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/compactuq2015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/compactuq2015/</guid>
+      <description>Computational Methods for UQ - Part 1
+ Computational Methods for UQ - Part 2
+ Exercise Sheet 1 (Model Solutions, Model Codes)
+ Computational Methods for UQ - Part 3
+ Multilevel tau-leaping for discrete systems (Kit Yates)
+ Matlab code to produce Gauss points &amp;amp; weights, Generating vector for QMC lattice rule, Codes for lognormal diffusion
+ Computational Methods for UQ - Part 4
+ Exercise Sheet 2</description>
+    </item>
+    
+    <item>
+      <title>Finite Elements</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/finiteelements1920/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/finiteelements1920/</guid>
+      <description>Information to follow</description>
+    </item>
+    
+    <item>
+      <title>Gianluca Detommaso</title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/gianluca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/gianluca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>High-Dimensional Approximation and Applications in Uncertainty Quantification</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/highdimapprox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/highdimapprox/</guid>
+      <description>Admnisitrative Matters
+Due to current situation around the COVID-19 pandemic the lecture will (at least initially) be held in an online form on the heiCONF platform. We will also create a moodle page for interaction and to share material. Possibly, we will be able to have the later lectures in a more traditional format, but that is very uncertain at this point. Announcement</description>
+    </item>
+    
+    <item>
+      <title>IWR School 2019 ML4Nature &#34;A Crash Course in Machine Learning with Applications in Natural and Life Sciences&#34;</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/mlcourse2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/mlcourse2019/</guid>
+      <description> Bayesian Inverse Problems &amp;amp; Uncertainty Quantification - Part 1 (Handout &amp;ldquo;Probability and Numerical Analysis 101&amp;rdquo;)
+ Bayesian Inverse Problems &amp;amp; Uncertainty Quantification - Part 2
+ Exercise Sheet 1 (Model Solutions, Model Codes)
+ Bayesian Inverse Problems &amp;amp; Uncertainty Quantification - Part 3
+ Bayesian Inverse Problems &amp;amp; Uncertainty Quantification - Part 4
+  </description>
+    </item>
+    
+    <item>
+      <title>Numerical Methods for ODEs</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/odesem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/odesem/</guid>
+      <description>Information and References (PDF)</description>
+    </item>
+    
+    <item>
+      <title>Robert Scheichl</title>
+      <link>https://katana.iwr.uni-heidelberg.de/people/rob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/people/rob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seminar Multiscale Methods</title>
+      <link>https://katana.iwr.uni-heidelberg.de/teaching/multiscaleseminar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://katana.iwr.uni-heidelberg.de/teaching/multiscaleseminar/</guid>
+      <description>Administrative Matters
+Due to current situation around the COVID-19 pandemic the seminar will (at least initially) be held in an online form on the heiCONF platform. We will also create a moodle page for interaction and to share material. Possibly, we will be able to have the final presentations in a more traditional format, but that is very uncertain at this point. Announcement</description>
+    </item>
+    
+  </channel>
+</rss>
